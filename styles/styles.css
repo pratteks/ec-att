@@ -493,3 +493,123 @@ blockquote {
   color: var(--text-color-secondary);
   margin: var(--spacing-m) 0;
 }
+
+/* ========== FOOTER LINK GRID ========== */
+
+/* The default-content-wrapper after accordion-links contains the footer link grid */
+
+.accordion-links-wrapper + .default-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--spacing-l);
+  padding: var(--spacing-l) 0;
+}
+
+/* Un-style button containers in footer link grid - make them text headings */
+.accordion-links-wrapper + .default-content-wrapper .button-container {
+  flex: 0 0 100%;
+  margin: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.accordion-links-wrapper + .default-content-wrapper .button-container a.button {
+  all: unset;
+  font-weight: 700;
+  font-size: var(--body-font-size-m);
+  color: var(--text-color);
+  cursor: default;
+  padding: var(--spacing-xs) 0 0;
+  display: block;
+}
+
+.accordion-links-wrapper + .default-content-wrapper .button-container a.button:hover {
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+/* Remove bullet points from footer link lists */
+.accordion-links-wrapper + .default-content-wrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-s);
+  flex: 0 0 100%;
+}
+
+.accordion-links-wrapper + .default-content-wrapper ul li {
+  margin: 0;
+  padding: 2px 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.accordion-links-wrapper + .default-content-wrapper ul li a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: var(--body-font-size-s);
+  line-height: 1.6;
+}
+
+.accordion-links-wrapper + .default-content-wrapper ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Footer copyright text */
+.accordion-links-wrapper + .default-content-wrapper > p:not(.button-container) {
+  flex: 0 0 100%;
+  font-size: var(--body-font-size-xs);
+  color: var(--text-color-light);
+  margin: 0;
+}
+
+/* Desktop: multi-column footer link grid */
+@media (width >= 900px) {
+  .accordion-links-wrapper + .default-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-s) var(--spacing-m);
+  }
+
+  .accordion-links-wrapper + .default-content-wrapper .button-container {
+    flex: unset;
+  }
+
+  .accordion-links-wrapper + .default-content-wrapper ul {
+    flex: unset;
+  }
+
+  .accordion-links-wrapper + .default-content-wrapper > p:not(.button-container) {
+    grid-column: 1 / -1;
+  }
+
+  .accordion-links-wrapper + .default-content-wrapper > ul:nth-of-type(n+9) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ========== HIDE LEFTOVER MODAL/POPUP CONTENT ========== */
+
+/* Imported modal content that shouldn't be visible */
+
+/* Hide "Estimated monthly cost" / "Video Title" modal content in footer grid */
+/* stylelint-disable-next-line no-descending-specificity */
+.accordion-links-wrapper + .default-content-wrapper > h3,
+.accordion-links-wrapper + .default-content-wrapper > h3 ~ * {
+  display: none;
+}
+
+/* Hide form field text labels and form response in sales section */
+
+/* The form area is the first default-content-wrapper in the accordion-links section */
+.accordion-links-container > .default-content-wrapper:first-child > p:nth-child(n+4):not(:nth-last-child(-n+1)),
+.accordion-links-container > .default-content-wrapper:first-child > h2:nth-of-type(2),
+.accordion-links-container > .default-content-wrapper:first-child > h2:nth-of-type(2) ~ * {
+  display: none;
+}
+
+/* Keep only "Talk to..." heading, phone text, and hours text visible */
+.accordion-links-container > .default-content-wrapper:first-child > h2:first-child,
+/* stylelint-disable-next-line no-descending-specificity */
+.accordion-links-container > .default-content-wrapper:first-child > p:nth-child(2),
+/* stylelint-disable-next-line no-descending-specificity */
+.accordion-links-container > .default-content-wrapper:first-child > p:nth-child(3) {
+  display: block;
+}
