@@ -1,0 +1,116 @@
+/* Accordion Links - Open link grid with category headings (not collapsible) */
+
+.accordion-links {
+  padding: var(--spacing-l) 0;
+}
+
+/* Remove all accordion chrome */
+.accordion-links details {
+  border: none;
+}
+
+.accordion-links details summary {
+  list-style: none;
+  padding: 0 0 var(--spacing-xs);
+  font-weight: 700;
+  font-size: var(--body-font-size-m);
+  color: var(--text-color);
+}
+
+.accordion-links details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Remove chevron and hover states */
+.accordion-links details summary::after {
+  display: none;
+}
+
+.accordion-links details summary:hover,
+.accordion-links details summary:focus {
+  background-color: transparent;
+}
+
+.accordion-links details[open] summary {
+  background-color: transparent;
+}
+
+/* First details item is the main heading */
+.accordion-links details:first-child {
+  margin-bottom: var(--spacing-l);
+}
+
+.accordion-links details:first-child summary {
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
+  line-height: 1.15;
+  padding: 0;
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Layout: stack category groups in a grid */
+/* stylelint-disable-next-line no-descending-specificity */
+.accordion-links details ~ details {
+  margin-bottom: var(--spacing-m);
+}
+
+/* Body content - links */
+.accordion-links details .accordion-links-item-body {
+  padding: 0;
+}
+
+.accordion-links details .accordion-links-item-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.accordion-links details .accordion-links-item-body ul li {
+  margin: 0;
+}
+
+.accordion-links details .accordion-links-item-body a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: var(--body-font-size-s);
+  padding: 4px 0;
+  display: inline-block;
+  line-height: 1.6;
+}
+
+.accordion-links details .accordion-links-item-body a:hover {
+  text-decoration: underline;
+}
+
+.accordion-links details .accordion-links-item-body p {
+  margin: 0;
+}
+
+@media (width >= 900px) {
+  /* Wrap all category details (not the heading) in a grid-like flow */
+  .accordion-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-m);
+  }
+
+  .accordion-links details:first-child {
+    flex: 0 0 100%;
+  }
+
+  .accordion-links details:first-child summary {
+    font-size: 48px;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  .accordion-links details ~ details {
+    flex: 0 0 calc(25% - var(--spacing-m));
+    margin-bottom: 0;
+  }
+}

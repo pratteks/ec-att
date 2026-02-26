@@ -1,0 +1,95 @@
+/* Hero Banner - 50/50 side-by-side layout (text left, image right) */
+
+/* Structure: .hero-banner > div(row1:image) + div(row2:text), each row has one div cell */
+
+.hero-banner-container .hero-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-banner {
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+/* Image row */
+.hero-banner > div:first-child {
+  line-height: 0;
+}
+
+.hero-banner > div:first-child img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text row */
+.hero-banner > div:last-child {
+  padding: var(--spacing-l) var(--spacing-s);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-banner > div:last-child > div > p:first-child {
+  font-size: 20px;
+  line-height: 1.05;
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-xs);
+}
+
+.hero-banner h2 {
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 1.15;
+  margin: var(--spacing-xs) 0 var(--spacing-s);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.hero-banner > div:last-child p {
+  color: var(--text-color-secondary);
+  font-size: var(--body-font-size-l);
+  line-height: 1.4;
+  margin: 0 0 var(--spacing-s);
+}
+
+.hero-banner .button-container {
+  margin-top: var(--spacing-xs);
+}
+
+@media (width >= 900px) {
+  .hero-banner {
+    flex-direction: row;
+    min-height: 500px;
+    align-items: stretch;
+  }
+
+  /* Text row - left 50% */
+  .hero-banner > div:last-child {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: var(--spacing-xl) var(--spacing-l);
+    order: -1;
+  }
+
+  /* Image row - right 50% */
+  .hero-banner > div:first-child {
+    flex: 0 0 50%;
+    max-width: 50%;
+    order: 0;
+  }
+
+  .hero-banner > div:first-child img {
+    min-height: 500px;
+  }
+
+  .hero-banner h2 {
+    font-size: 48px;
+    line-height: 1.15;
+  }
+}

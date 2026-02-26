@@ -1,74 +1,115 @@
 /*
- * Copyright 2020 Adobe. All rights reserved.
- * This file is licensed to you under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License. You may obtain a copy
- * of the License at http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software distributed under
- * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
- * OF ANY KIND, either express or implied. See the License for the specific language
- * governing permissions and limitations under the License.
+ * AT&T Business - Design System
+ * Migrated from https://www.business.att.com/
  */
 
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  /* ========== COLORS ========== */
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  /* Brand */
+  --att-blue: #00388f;
+  --att-blue-hover: #002a6b;
+  --att-light-blue: #f2fafd;
+  --att-cyan: #009fdb;
 
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  /* Text */
+  --text-color: #1d2329;
+  --text-color-secondary: #454b52;
+  --text-color-light: #878c94;
+  --text-color-inverse: #fff;
+  --text-color-inverse-soft: #f2fafd;
 
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  /* Backgrounds */
+  --background-color: #fff;
+  --light-color: #f2f2f2;
+  --dark-color: #1d2329;
+  --grey-color: #f5f5f5;
+  --accent-color: #e6f4fb;
 
-  /* nav height */
+  /* Links */
+  --link-color: #454b52;
+  --link-hover-color: #1d2329;
+
+  /* Borders */
+  --border-color: #d2d2d2;
+  --border-color-dark: #878c94;
+
+  /* ========== FONTS ========== */
+  --body-font-family: 'ATT Aleck Sans', att-aleck-sans-fallback, helvetica, arial, sans-serif;
+  --heading-font-family: 'ATT Aleck Sans', att-aleck-sans-fallback, helvetica, arial, sans-serif;
+
+  /* Body sizes */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+  --body-font-size-l: 18px;
+
+  /* Heading sizes (mobile-first) */
+  --heading-font-size-xxl: 32px;
+  --heading-font-size-xl: 28px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 22px;
+  --heading-font-size-s: 18px;
+  --heading-font-size-xs: 16px;
+
+  /* ========== SPACING ========== */
+  --spacing-xs: 8px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+
+  /* ========== LAYOUT ========== */
+  --content-max-width: 1220px;
   --nav-height: 64px;
+
+  /* ========== BUTTONS ========== */
+  --button-border-radius: 28px;
+  --button-padding: 0 32px;
+  --button-height: 48px;
+  --button-font-size: 14px;
+  --button-transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+  /* ========== TRANSITIONS ========== */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* ========== FOCUS ========== */
+  --focus-outline: 2px solid var(--att-blue);
+  --focus-outline-offset: 2px;
+
+  /* ========== FORM ========== */
+  --input-border: 1px solid var(--border-color-dark);
+  --input-border-radius: 8px;
+  --input-padding: 12px 16px;
+  --input-height: 48px;
 }
 
-/* fallback fonts */
+/* Fallback font */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
+  font-family: att-aleck-sans-fallback;
+  size-adjust: 100%;
+  src: local('Helvetica Neue'), local('Helvetica'), local('Arial');
 }
 
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
-  src: local('Arial');
-}
-
+/* Desktop breakpoint */
 @media (width >= 900px) {
   :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
-
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
+    --heading-font-size-xxl: 38px;
+    --heading-font-size-xl: 32px;
     --heading-font-size-l: 28px;
     --heading-font-size-m: 22px;
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
+    --body-font-size-m: 16px;
+    --body-font-size-s: 14px;
+    --body-font-size-xs: 12px;
   }
 }
+
+/* ========== BASE STYLES ========== */
 
 body {
   display: none;
@@ -77,7 +118,10 @@ body {
   color: var(--text-color);
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body.appear {
@@ -98,17 +142,21 @@ footer .footer[data-block-status="loaded"] {
   visibility: visible;
 }
 
+/* ========== TYPOGRAPHY ========== */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 8px;
+  margin-bottom: 16px;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--text-color);
   scroll-margin: 40px;
 }
 
@@ -125,8 +173,13 @@ ol,
 ul,
 pre,
 blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 0;
+  margin-bottom: var(--spacing-s);
+}
+
+p {
+  line-height: 1.5;
+  color: var(--text-color-secondary);
 }
 
 code,
@@ -135,29 +188,20 @@ pre {
 }
 
 pre {
-  padding: 16px;
-  border-radius: 8px;
+  padding: var(--spacing-s);
+  border-radius: var(--input-border-radius);
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
 }
 
-main > div {
-  margin: 40px 16px;
-}
+/* ========== LINKS ========== */
 
-input,
-textarea,
-select,
-button {
-  font: inherit;
-}
-
-/* links */
 a:any-link {
   color: var(--link-color);
-  text-decoration: none;
+  text-decoration: underline;
   overflow-wrap: break-word;
+  transition: color var(--transition-base);
 }
 
 a:hover {
@@ -165,50 +209,95 @@ a:hover {
   text-decoration: underline;
 }
 
-/* buttons */
+a:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
+}
+
+/* ========== BUTTONS ========== */
+
 a.button:any-link,
 button {
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   max-width: 100%;
   margin: 12px 0;
   border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  height: var(--button-height);
   font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 500;
-  line-height: 1.25;
+  font-weight: 700;
+  font-size: var(--button-font-size);
+  line-height: 1;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
-  color: var(--background-color);
+  background-color: var(--att-blue);
+  color: var(--text-color-inverse);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: var(--button-transition);
 }
 
 a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
-  background-color: var(--link-hover-color);
+  background-color: var(--att-blue-hover);
+  color: var(--text-color-inverse);
+  text-decoration: none;
   cursor: pointer;
+}
+
+a.button:focus-visible,
+button:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: var(--focus-outline-offset);
 }
 
 button:disabled,
 button:disabled:hover {
   background-color: var(--light-color);
-  cursor: unset;
+  color: var(--text-color-light);
+  border-color: transparent;
+  cursor: not-allowed;
 }
 
+/* Secondary button - outline style */
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  background-color: transparent;
+  border: 2px solid var(--att-blue);
+  color: var(--att-blue);
 }
+
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--att-blue);
+  color: var(--text-color-inverse);
+  border-color: var(--att-blue);
+}
+
+/* Light/inverse secondary button (on dark backgrounds) */
+.section.dark a.button.secondary,
+.section.dark button.secondary {
+  border-color: var(--text-color-inverse-soft);
+  color: var(--text-color-inverse-soft);
+}
+
+.section.dark a.button.secondary:hover,
+.section.dark button.secondary:hover {
+  background-color: var(--text-color-inverse-soft);
+  color: var(--att-blue);
+  border-color: var(--text-color-inverse-soft);
+}
+
+/* ========== IMAGES ========== */
 
 main img {
   max-width: 100%;
@@ -227,15 +316,58 @@ main img {
   width: 100%;
 }
 
-/* sections */
+/* ========== FORM ELEMENTS ========== */
+
+input,
+textarea,
+select,
+/* stylelint-disable-next-line no-descending-specificity */
+button {
+  font: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+  box-sizing: border-box;
+  padding: var(--input-padding);
+  border: var(--input-border);
+  border-radius: var(--input-border-radius);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-s);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: var(--input-height);
+  line-height: normal;
+  width: 100%;
+  transition: border-color var(--transition-base);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--att-blue);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--att-blue);
+}
+
+/* ========== LAYOUT - SECTIONS ========== */
+
+main > div {
+  margin: 40px 16px;
+}
+
 main > .section {
-  margin: 40px 0;
+  margin: 0;
+  padding: var(--spacing-xl) 0;
 }
 
 main > .section > div {
-  max-width: 1200px;
+  max-width: var(--content-max-width);
   margin: auto;
-  padding: 0 24px;
+  padding: 0 var(--spacing-s);
 }
 
 main > .section:first-of-type {
@@ -244,14 +376,120 @@ main > .section:first-of-type {
 
 @media (width >= 900px) {
   main > .section > div {
-    padding: 0 32px;
+    padding: 0 var(--spacing-l);
   }
 }
 
-/* section metadata */
+/* ========== SECTION VARIANTS ========== */
+
+/* Light / Highlight section */
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
-  margin: 0;
-  padding: 40px 0;
+}
+
+/* Grey section */
+main .section.grey {
+  background-color: var(--grey-color);
+}
+
+/* Accent section (light blue) */
+main .section.accent {
+  background-color: var(--accent-color);
+}
+
+/* Dark section */
+main .section.dark {
+  background-color: var(--dark-color);
+  color: var(--text-color-inverse);
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6 {
+  color: var(--text-color-inverse);
+}
+
+main .section.dark p {
+  color: var(--text-color-inverse-soft);
+}
+
+main .section.dark a:any-link {
+  color: var(--text-color-inverse-soft);
+}
+
+main .section.dark a.button:any-link {
+  background-color: var(--text-color-inverse);
+  color: var(--att-blue);
+}
+
+main .section.dark a.button:hover {
+  background-color: var(--att-light-blue);
+  color: var(--att-blue);
+}
+
+/* ATT Blue section */
+main .section.att-blue {
+  background-color: var(--att-blue);
+  color: var(--text-color-inverse);
+}
+
+main .section.att-blue h1,
+main .section.att-blue h2,
+main .section.att-blue h3,
+main .section.att-blue h4,
+main .section.att-blue h5,
+main .section.att-blue h6 {
+  color: var(--text-color-inverse);
+}
+
+main .section.att-blue p {
+  color: var(--text-color-inverse-soft);
+}
+
+main .section.att-blue a:any-link {
+  color: var(--text-color-inverse-soft);
+}
+
+main .section.att-blue a.button:any-link {
+  background-color: var(--text-color-inverse);
+  color: var(--att-blue);
+  border-color: transparent;
+}
+
+main .section.att-blue a.button:hover {
+  background-color: var(--att-light-blue);
+}
+
+/* ========== LISTS ========== */
+
+ul,
+ol {
+  padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: 0.5em;
+  color: var(--text-color-secondary);
+}
+
+/* ========== HR ========== */
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border-color);
+  margin: var(--spacing-l) 0;
+}
+
+/* ========== BLOCKQUOTE ========== */
+
+blockquote {
+  border-left: 4px solid var(--att-blue);
+  padding-left: var(--spacing-s);
+  font-style: italic;
+  color: var(--text-color-secondary);
+  margin: var(--spacing-m) 0;
 }

@@ -1,0 +1,87 @@
+/* Cards Story - Tile cards with images (Mobile, Internet, Voice etc.) */
+
+/* Structure: .cards-story > ul > li > div(image) + div(text) */
+
+.cards-story > ul {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: var(--spacing-s);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding-bottom: var(--spacing-xs);
+}
+
+.cards-story > ul::-webkit-scrollbar {
+  display: none;
+}
+
+.cards-story > ul > li {
+  flex: 0 0 85%;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
+.cards-story > ul > li > div:first-child {
+  line-height: 0;
+}
+
+.cards-story > ul > li > div:first-child img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px 16px 0 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-story > ul > li > div:last-child {
+  padding: var(--spacing-s) var(--spacing-s) var(--spacing-m);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-story > ul > li > div:last-child p {
+  margin: 0 0 var(--spacing-xs);
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-secondary);
+  line-height: 1.5;
+}
+
+.cards-story > ul > li > div:last-child p strong {
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  color: var(--text-color);
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  line-height: 1.2;
+}
+
+.cards-story > ul > li > div:last-child .button-container {
+  margin-top: auto;
+  padding-top: var(--spacing-s);
+}
+
+@media (width >= 600px) {
+  .cards-story > ul > li {
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-story > ul {
+    overflow-x: visible;
+    flex-wrap: wrap;
+    gap: var(--spacing-s);
+  }
+
+  .cards-story > ul > li {
+    flex: 0 0 calc(33.333% - 11px);
+  }
+}

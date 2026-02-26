@@ -13,15 +13,75 @@
       "button",
       "title",
       "hero",
+      "hero-banner",
+      "hero-dark",
       "cards",
+      "cards-product",
+      "cards-promo",
+      "cards-value",
+      "cards-story",
       "columns",
+      "columns-offer",
+      "carousel-industry",
+      "accordion-links",
       "fragment"
+    ]
+  },
+  {
+    "id": "accordion-links",
+    "components": [
+      "accordion-links-item"
+    ]
+  },
+  {
+    "id": "cards-product",
+    "components": [
+      "cards-product-item"
+    ]
+  },
+  {
+    "id": "cards-promo",
+    "components": [
+      "cards-promo-item"
+    ]
+  },
+  {
+    "id": "cards-story",
+    "components": [
+      "cards-story-item"
+    ]
+  },
+  {
+    "id": "cards-value",
+    "components": [
+      "cards-value-item"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "carousel-industry",
+    "components": [
+      "carousel-industry-slide"
+    ]
+  },
+  {
+    "id": "columns-offer",
+    "components": [
+      "columns-offer-column"
+    ]
+  },
+  {
+    "id": "columns-offer-column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
     ]
   },
   {

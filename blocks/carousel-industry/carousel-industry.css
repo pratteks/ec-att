@@ -1,0 +1,98 @@
+/* Carousel Industry - Industry sector list with icon and text rows */
+
+.carousel-industry .carousel-industry-slides-container {
+  position: relative;
+}
+
+.carousel-industry .carousel-industry-slides,
+.carousel-industry .carousel-industry-slide-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carousel-industry .carousel-industry-slides {
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel-industry .carousel-industry-slides::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-industry .carousel-industry-slide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--spacing-m) 0;
+  border-bottom: 1px solid var(--border-color);
+  gap: var(--spacing-s);
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+}
+
+.carousel-industry .carousel-industry-slide:first-child {
+  border-top: 1px solid var(--border-color);
+}
+
+.carousel-industry .carousel-industry-slide:hover {
+  background-color: var(--grey-color);
+}
+
+.carousel-industry .carousel-industry-slide .carousel-industry-slide-image {
+  flex: 0 0 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-industry .carousel-industry-slide .carousel-industry-slide-image picture {
+  position: static;
+}
+
+.carousel-industry .carousel-industry-slide .carousel-industry-slide-image picture > img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.carousel-industry .carousel-industry-slide .carousel-industry-slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--text-color);
+  background-color: transparent;
+  position: static;
+  z-index: auto;
+  margin: 0;
+  width: auto;
+}
+
+.carousel-industry .carousel-industry-slide .carousel-industry-slide-content h2 {
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
+  margin: 0 0 var(--spacing-xs);
+  color: var(--text-color);
+}
+
+.carousel-industry .carousel-industry-slide .carousel-industry-slide-content p {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.carousel-industry .carousel-industry-slide-indicators {
+  display: none;
+}
+
+.carousel-industry .carousel-industry-navigation-buttons {
+  display: none;
+}
+
+@media (width >= 900px) {
+  .carousel-industry .carousel-industry-slide .carousel-industry-slide-image {
+    flex: 0 0 80px;
+  }
+}

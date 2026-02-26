@@ -1,0 +1,9 @@
+{
+  "type": "xwalk",
+  "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json",
+  "contentHostUrl": "author-p170502-e1825534.adobeaemcloud.com",
+  "aemSitePath": "/content/ec-att",
+  "aemAssetsFolderPath": "/content/dam/ec-att",
+  "aemSiteName": "ec-att",
+  "aemSiteTitle": "ec-att"
+}

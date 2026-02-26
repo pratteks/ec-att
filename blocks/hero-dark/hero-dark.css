@@ -1,0 +1,100 @@
+/* Hero Dark - Dark/colored background with full-width image and light text */
+
+.hero-dark-container .hero-dark-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-dark {
+  position: relative;
+  padding: var(--spacing-xl) var(--spacing-s);
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-color: var(--dark-color);
+}
+
+.hero-dark > div:first-child {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-dark > div:first-child picture {
+  display: block;
+  height: 100%;
+}
+
+.hero-dark > div:first-child img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-dark > div:last-child {
+  position: relative;
+  z-index: 1;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--spacing-m);
+}
+
+.hero-dark h1,
+.hero-dark h2,
+.hero-dark h3,
+.hero-dark h4,
+.hero-dark h5,
+.hero-dark h6 {
+  color: var(--text-color-inverse);
+  max-width: 600px;
+}
+
+.hero-dark p {
+  color: var(--text-color-inverse-soft);
+  max-width: 600px;
+  font-size: var(--body-font-size-l);
+  line-height: 1.5;
+}
+
+.hero-dark a.button:any-link {
+  background-color: var(--text-color-inverse);
+  color: var(--att-blue);
+  border-color: transparent;
+}
+
+.hero-dark a.button:hover {
+  background-color: var(--att-light-blue);
+  color: var(--att-blue);
+}
+
+.hero-dark a.button.secondary:any-link {
+  background-color: transparent;
+  border-color: var(--text-color-inverse-soft);
+  color: var(--text-color-inverse-soft);
+}
+
+.hero-dark a.button.secondary:hover {
+  background-color: var(--text-color-inverse-soft);
+  color: var(--att-blue);
+}
+
+.hero-dark .button-container {
+  margin-top: var(--spacing-s);
+}
+
+.hero-dark.no-image {
+  min-height: 200px;
+}
+
+@media (width >= 900px) {
+  .hero-dark {
+    padding: var(--spacing-xxl) var(--spacing-l);
+    min-height: 480px;
+  }
+
+  .hero-dark > div:last-child {
+    padding: var(--spacing-l);
+  }
+}
