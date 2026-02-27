@@ -1,5 +1,6 @@
 footer {
-  background-color: var(--light-color);
+  background-color: var(--att-dark-navy, #191919);
+  color: #fff;
   font-size: var(--body-font-size-xs);
 }
 
@@ -13,8 +14,130 @@ footer .footer p {
   margin: 0;
 }
 
+footer .footer a:any-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  text-decoration: underline;
+}
+
+/* Section 1: Brand + social links — same row, space-between */
+footer .footer > div > .section:first-child {
+  padding-bottom: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+
+footer .footer > div > .section:first-child .default-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Un-style brand button */
+footer .footer .button-container {
+  margin: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer .button-container a.button {
+  all: unset;
+  font-weight: 700;
+  font-size: var(--body-font-size-m);
+  color: #fff;
+  cursor: pointer;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer .button-container a.button:hover {
+  background-color: transparent;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Social links — aligned right */
+footer .footer > div > .section:first-child .default-content-wrapper > p:nth-child(2) {
+  display: flex;
+  gap: var(--spacing-m);
+  margin: 0;
+}
+
+footer .footer > div > .section:first-child .default-content-wrapper > p:nth-child(2) a {
+  font-size: var(--body-font-size-xs);
+  opacity: 0.8;
+}
+
+footer .footer > div > .section:first-child .default-content-wrapper > p:nth-child(2) a:hover {
+  opacity: 1;
+}
+
+/* Section 2: Utility links — 4-column grid, bold */
+footer .footer > div > .section:nth-child(2) {
+  padding-bottom: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+  border-bottom: 1px solid rgb(255 255 255 / 20%);
+}
+
+footer .footer > div > .section:nth-child(2) ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 24px;
+}
+
+footer .footer > div > .section:nth-child(2) ul li {
+  margin: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > .section:nth-child(2) ul li a {
+  font-weight: 700;
+  font-size: var(--body-font-size-s);
+  opacity: 1;
+}
+
+/* Section 3: Legal links + copyright */
+footer .footer > div > .section:last-child ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px var(--spacing-m);
+}
+
+footer .footer > div > .section:last-child ul li {
+  margin: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > .section:last-child ul li a {
+  font-size: var(--body-font-size-xs);
+  opacity: 0.8;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > .section:last-child ul li a:hover {
+  opacity: 1;
+}
+
+footer .footer > div > .section:last-child .default-content-wrapper > p:last-child {
+  margin-top: var(--spacing-m);
+  font-size: 11px;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
 @media (width >= 900px) {
   footer .footer > div {
     padding: 40px 32px 24px;
+  }
+
+  footer .footer > div > .section:nth-child(2) ul {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

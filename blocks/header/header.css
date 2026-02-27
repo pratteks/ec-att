@@ -4,6 +4,7 @@ header .nav-wrapper {
   width: 100%;
   z-index: 2;
   position: fixed;
+  border-bottom: 1px solid #d2d2d2;
 }
 
 header nav {
@@ -30,6 +31,11 @@ header nav[aria-expanded='true'] {
   min-height: 100dvh;
 }
 
+/* utility bar — hidden on mobile */
+header nav .nav-utility {
+  display: none;
+}
+
 @media (width >= 900px) {
   header .nav-wrapper {
     position: relative;
@@ -37,6 +43,7 @@ header nav[aria-expanded='true'] {
 
   header nav {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 0 32px;
     max-width: 1264px;
@@ -46,6 +53,41 @@ header nav[aria-expanded='true'] {
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
+  }
+
+  /* utility bar — full-width top row */
+  header nav .nav-utility {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    order: -1;
+    padding: 8px 0;
+    border-bottom: 1px solid #d2d2d2;
+    font-size: var(--body-font-size-xs);
+  }
+
+  header nav .nav-utility .default-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  header nav .nav-utility p {
+    display: flex;
+    gap: 16px;
+    margin: 0;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  header nav .nav-utility a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: var(--body-font-size-xs);
+  }
+
+  header nav .nav-utility a:hover {
+    text-decoration: underline;
   }
 }
 
@@ -224,13 +266,23 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 0;
     margin: 0;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+    padding: 0 24px;
+    border-right: 1px solid #d2d2d2;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li:first-child {
+    padding-left: 0;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li:last-child {
+    border-right: none;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
@@ -261,8 +313,71 @@ header nav .nav-sections ul > li > ul > li {
     border-bottom: 8px solid var(--light-color);
   }
 
+  /* stylelint-disable-next-line no-descending-specificity */
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
     padding: 8px 0;
+  }
+
+  /* Mega-menu: full-width panel with multi-column grid */
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-mega[aria-expanded='true'] > ul {
+    width: auto;
+    position: fixed;
+    top: auto;
+    left: 0;
+    right: 0;
+    padding: 32px 48px;
+    background-color: #fff;
+    border-top: 1px solid #d2d2d2;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 48px;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-mega > ul::before {
+    display: none;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-mega > ul > li {
+    padding: 0;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-mega > ul > li > strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: var(--body-font-size-s);
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-mega > ul > li > strong a {
+    color: var(--text-color);
+    font-weight: 700;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-mega > ul > li > ul {
+    display: block;
+    position: static;
+    width: auto;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-mega > ul > li > ul > li {
+    padding: 4px 0;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-mega > ul > li > ul > li a {
+    font-size: var(--body-font-size-xs);
+    font-weight: 400;
+    color: var(--text-color);
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li.nav-mega > ul > li > ul > li a:hover {
+    color: var(--link-color);
   }
 }
 

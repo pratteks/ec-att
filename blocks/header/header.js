@@ -110,7 +110,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/content/nav';
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM
@@ -119,11 +119,23 @@ export default async function decorate(block) {
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand', 'sections', 'tools'];
+  const classes = ['utility', 'brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
   });
+
+  // Strip button classes from utility bar links
+  const navUtility = nav.querySelector('.nav-utility');
+  if (navUtility) {
+    navUtility.querySelectorAll('.button').forEach((button) => {
+      button.className = '';
+      const buttonContainer = button.closest('.button-container');
+      if (buttonContainer) {
+        buttonContainer.className = '';
+      }
+    });
+  }
 
   const navBrand = nav.querySelector('.nav-brand');
   const brandLink = navBrand.querySelector('.button');
@@ -134,8 +146,22 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
+    // Remove button classes from all links in nav-sections
+    navSections.querySelectorAll('.button').forEach((button) => {
+      button.className = '';
+      const buttonContainer = button.closest('.button-container');
+      if (buttonContainer) {
+        buttonContainer.className = '';
+      }
+    });
+
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
+      // Detect mega-menu: dropdown items that themselves have nested categories with sub-lists
+      const nestedCategories = navSection.querySelectorAll(':scope > ul > li > ul');
+      if (nestedCategories.length > 0) {
+        navSection.classList.add('nav-mega');
+      }
       navSection.addEventListener('click', () => {
         if (isDesktop.matches) {
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
@@ -143,6 +169,18 @@ export default async function decorate(block) {
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         }
       });
+    });
+  }
+
+  // Remove button classes from tools section links
+  const navTools = nav.querySelector('.nav-tools');
+  if (navTools) {
+    navTools.querySelectorAll('.button').forEach((button) => {
+      button.className = '';
+      const buttonContainer = button.closest('.button-container');
+      if (buttonContainer) {
+        buttonContainer.className = '';
+      }
     });
   }
 
