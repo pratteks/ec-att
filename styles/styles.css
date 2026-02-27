@@ -519,3 +519,255 @@ blockquote {
 .accordion-links-container > .default-content-wrapper:first-child > p:nth-child(3) {
   display: block;
 }
+
+/* ========== ACCENT SECTION - SWITCH TO AT&T (SIDE-BY-SIDE) ========== */
+
+/* The second default-content-wrapper in accent section: text left, image right */
+@media (width >= 900px) {
+  .section.accent > .default-content-wrapper:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, auto);
+    gap: 0 var(--spacing-xl);
+    align-items: start;
+  }
+
+  .section.accent > .default-content-wrapper:nth-child(2) > * {
+    grid-column: 1;
+  }
+
+  .section.accent > .default-content-wrapper:nth-child(2) > p:last-child {
+    grid-column: 2;
+    grid-row: 1 / span 6;
+    align-self: center;
+  }
+
+  .section.accent > .default-content-wrapper:nth-child(2) > p:last-child img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+}
+
+/* Checkmark bullets for accent section list */
+.section.accent > .default-content-wrapper:nth-child(2) ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.section.accent > .default-content-wrapper:nth-child(2) ul li {
+  position: relative;
+  padding-left: var(--spacing-m);
+  margin-bottom: var(--spacing-s);
+}
+
+.section.accent > .default-content-wrapper:nth-child(2) ul li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--att-cyan);
+  font-weight: 700;
+}
+
+/* ========== CARDS-VALUE TRAILING CONTENT (J.D. POWER + DYNAMIC DEFENSE) ========== */
+
+/* J.D. Power trophy images - display side by side */
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(4),
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(5) {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: var(--spacing-s);
+}
+
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(4) img,
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(5) img {
+  max-width: 200px;
+  height: auto;
+}
+
+/* Dynamic Defense section - dark hero treatment */
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(6) {
+  margin-top: var(--spacing-xxl);
+  font-size: var(--body-font-size-s);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-color-light);
+}
+
+/* Dynamic Defense background image - position behind text */
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(11) {
+  display: none;
+}
+
+/* ========== CAROUSEL SECTION - INTRO IMAGE ========== */
+
+/* Hide the large intro image to match original's compact industry intro */
+.carousel-industry-container > .default-content-wrapper:first-child > p:last-child {
+  display: none;
+}
+
+/* ========== CAROUSEL SECTION - AT&T GUARANTEE HERO ========== */
+
+/* The last default-content-wrapper in carousel section contains AT&T Guarantee + customer stories */
+.carousel-industry-container > .default-content-wrapper:last-child {
+  padding-top: var(--spacing-xl);
+}
+
+/* AT&T Guarantee image - constrain size */
+.carousel-industry-container > .default-content-wrapper:last-child > p:first-child img {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Hide the AT&T Guarantee background image (was a dark hero overlay in original) */
+.carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(6) {
+  display: none;
+}
+
+/* AT&T Guarantee checklist */
+.carousel-industry-container > .default-content-wrapper:last-child > ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.carousel-industry-container > .default-content-wrapper:last-child > ul > li {
+  position: relative;
+  padding-left: var(--spacing-m);
+}
+
+.carousel-industry-container > .default-content-wrapper:last-child > ul > li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--att-cyan);
+  font-weight: 700;
+}
+
+/* ========== CUSTOMER STORIES ========== */
+
+/* Customer story section heading */
+.carousel-industry-container > .default-content-wrapper:last-child > h3 {
+  font-size: var(--heading-font-size-s);
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Story card images - compact size */
+.carousel-industry-container > .default-content-wrapper:last-child > p:has(img:only-child) {
+  line-height: 0;
+  margin-bottom: var(--spacing-s);
+}
+
+.carousel-industry-container > .default-content-wrapper:last-child > p:has(img:only-child) img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Use 2-column grid layout on desktop for the last wrapper */
+@media (width >= 900px) {
+  .carousel-industry-container > .default-content-wrapper:last-child {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 var(--spacing-xl);
+  }
+
+  /* AT&T Guarantee content spans full width (first 6 children) */
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(-n+6) {
+    grid-column: 1 / -1;
+  }
+
+  /* "Driving industry success" heading and description span full width */
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(7),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(8) {
+    grid-column: 1 / -1;
+  }
+
+  /* Story 1 (children 9-14): column 1 */
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(9),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(10),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(11),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(12),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(13),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(14) {
+    grid-column: 1;
+  }
+
+  /* Story 2 (children 15-20): column 2 */
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(15),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(16),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(17),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(18),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(19),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(20) {
+    grid-column: 2;
+  }
+
+  /* Story 3 (children 21-26): column 1 */
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(21),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(22),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(23),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(24),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(25),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(26) {
+    grid-column: 1;
+  }
+
+  /* Story 4 (children 27-32): column 2 */
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(27),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(28),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(29),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(30),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(31),
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(32) {
+    grid-column: 2;
+  }
+
+  /* Disclaimer and "Read more" span full width */
+  .carousel-industry-container > .default-content-wrapper:last-child > *:nth-child(n+33) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Read the full story links */
+.carousel-industry-container > .default-content-wrapper:last-child > p > a[href*="customer-stories"],
+.carousel-industry-container > .default-content-wrapper:last-child > p > a[href*="medical-spa"] {
+  color: var(--att-blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.carousel-industry-container > .default-content-wrapper:last-child > p > a[href*="customer-stories"]:hover,
+.carousel-industry-container > .default-content-wrapper:last-child > p > a[href*="medical-spa"]:hover {
+  text-decoration: underline;
+}
+
+/* ========== CARDS-PROMO SECTION LAYOUT ========== */
+
+/* Ensure the two promo card blocks share one row on desktop */
+@media (width >= 900px) {
+  .section.cards-promo-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .section.cards-promo-container > .default-content-wrapper {
+    width: 100%;
+    flex-basis: 100%;
+  }
+
+  .section.cards-promo-container > .cards-promo-wrapper {
+    flex: 1;
+  }
+
+  .section.cards-promo-container > .cards-promo-wrapper:first-of-type {
+    flex: 2;
+  }
+}
