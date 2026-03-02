@@ -27,30 +27,30 @@ const PAGE_TEMPLATE = {
     {
       "name": "hero-banner",
       "instances": [
-        "div.hero.aem-GridColumn:nth-of-type(1)"
+        "div.hero.aem-GridColumn:nth-of-type(5)"
       ]
     },
     {
       "name": "cards-product",
       "instances": [
-        "div.multi-tile-cards.aem-GridColumn:nth-of-type(1)",
-        "div.multi-tile-cards.aem-GridColumn:nth-of-type(2)",
-        "div.multi-tile-cards.aem-GridColumn:nth-of-type(3)"
+        "div.multi-tile-cards.aem-GridColumn:nth-of-type(11)",
+        "div.multi-tile-cards.aem-GridColumn:nth-of-type(14)",
+        "div.multi-tile-cards.aem-GridColumn:nth-of-type(15)"
       ]
     },
     {
       "name": "cards-value",
       "instances": [
-        "div.generic-list-value-prop.aem-GridColumn:nth-of-type(1)",
-        "div.generic-list-value-prop.aem-GridColumn:nth-of-type(2)"
+        "div.generic-list-value-prop.aem-GridColumn:nth-of-type(8)",
+        "div.generic-list-value-prop.aem-GridColumn:nth-of-type(16)"
       ]
     },
     {
       "name": "hero-dark",
       "instances": [
-        "div.hero.aem-GridColumn:nth-of-type(2)",
-        "div.hero.aem-GridColumn:nth-of-type(3)",
-        "div.hero.aem-GridColumn:nth-of-type(4)"
+        "div.hero.aem-GridColumn:nth-of-type(9)",
+        "div.hero.aem-GridColumn:nth-of-type(12)",
+        "div.hero.aem-GridColumn:nth-of-type(13)"
       ]
     },
     {
@@ -90,7 +90,7 @@ const PAGE_TEMPLATE = {
     {
       "id": "section-3",
       "name": "Hero Banner",
-      "selector": "div.hero.aem-GridColumn:nth-of-type(1)",
+      "selector": "div.hero.aem-GridColumn:nth-of-type(5)",
       "style": null,
       "blocks": [
         "hero-banner"
@@ -110,19 +110,19 @@ const PAGE_TEMPLATE = {
     {
       "id": "section-5",
       "name": "Plan Features",
-      "selector": "div.generic-list-value-prop.aem-GridColumn:nth-of-type(1)",
+      "selector": "div.generic-list-value-prop.aem-GridColumn:nth-of-type(8)",
       "style": null,
       "blocks": [
         "cards-value"
       ],
       "defaultContent": [
-        "div.generic-list-value-prop:nth-of-type(1) h3"
+        "div.generic-list-value-prop:nth-of-type(8) h3"
       ]
     },
     {
       "id": "section-6",
       "name": "Award Banner",
-      "selector": "div.hero.aem-GridColumn:nth-of-type(2)",
+      "selector": "div.hero.aem-GridColumn:nth-of-type(9)",
       "style": null,
       "blocks": [
         "hero-dark"
@@ -142,19 +142,19 @@ const PAGE_TEMPLATE = {
     {
       "id": "section-8",
       "name": "Deal Cards",
-      "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(1)",
+      "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(11)",
       "style": "accent",
       "blocks": [
         "cards-product"
       ],
       "defaultContent": [
-        "div.multi-tile-cards:nth-of-type(1) .eyebrow-heading-body"
+        "div.multi-tile-cards:nth-of-type(11) .eyebrow-heading-body"
       ]
     },
     {
       "id": "section-9",
       "name": "Bundle Hero",
-      "selector": "div.hero.aem-GridColumn:nth-of-type(3)",
+      "selector": "div.hero.aem-GridColumn:nth-of-type(12)",
       "style": null,
       "blocks": [
         "hero-dark"
@@ -164,7 +164,7 @@ const PAGE_TEMPLATE = {
     {
       "id": "section-10",
       "name": "Guarantee Hero",
-      "selector": "div.hero.aem-GridColumn:nth-of-type(4)",
+      "selector": "div.hero.aem-GridColumn:nth-of-type(13)",
       "style": null,
       "blocks": [
         "hero-dark"
@@ -174,37 +174,37 @@ const PAGE_TEMPLATE = {
     {
       "id": "section-11",
       "name": "Add-on Cards",
-      "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(2)",
+      "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(14)",
       "style": "accent",
       "blocks": [
         "cards-product"
       ],
       "defaultContent": [
-        "div.multi-tile-cards:nth-of-type(2) .eyebrow-heading-body"
+        "div.multi-tile-cards:nth-of-type(14) .eyebrow-heading-body"
       ]
     },
     {
       "id": "section-12",
       "name": "Device Cards",
-      "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(3)",
+      "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(15)",
       "style": null,
       "blocks": [
         "cards-product"
       ],
       "defaultContent": [
-        "div.multi-tile-cards:nth-of-type(3) .eyebrow-heading-body"
+        "div.multi-tile-cards:nth-of-type(15) .eyebrow-heading-body"
       ]
     },
     {
       "id": "section-13",
       "name": "Help Section",
-      "selector": "div.generic-list-value-prop.aem-GridColumn:nth-of-type(2)",
+      "selector": "div.generic-list-value-prop.aem-GridColumn:nth-of-type(16)",
       "style": "accent",
       "blocks": [
         "cards-value"
       ],
       "defaultContent": [
-        "div.generic-list-value-prop:nth-of-type(2) h3"
+        "div.generic-list-value-prop:nth-of-type(16) h3"
       ]
     },
     {

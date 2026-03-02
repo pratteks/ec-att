@@ -1,25 +1,8 @@
 var CustomImportScript = (() => {
   var __defProp = Object.defineProperty;
-  var __defProps = Object.defineProperties;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
-  var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
   var __getOwnPropNames = Object.getOwnPropertyNames;
-  var __getOwnPropSymbols = Object.getOwnPropertySymbols;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
-  var __propIsEnum = Object.prototype.propertyIsEnumerable;
-  var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-  var __spreadValues = (a, b) => {
-    for (var prop in b || (b = {}))
-      if (__hasOwnProp.call(b, prop))
-        __defNormalProp(a, prop, b[prop]);
-    if (__getOwnPropSymbols)
-      for (var prop of __getOwnPropSymbols(b)) {
-        if (__propIsEnum.call(b, prop))
-          __defNormalProp(a, prop, b[prop]);
-      }
-    return a;
-  };
-  var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
   var __export = (target, all) => {
     for (var name in all)
       __defProp(target, name, { get: all[name], enumerable: true });
@@ -334,30 +317,30 @@ var CustomImportScript = (() => {
       {
         "name": "hero-banner",
         "instances": [
-          "div.hero.aem-GridColumn:nth-of-type(1)"
+          "div.hero.aem-GridColumn:nth-of-type(5)"
         ]
       },
       {
         "name": "cards-product",
         "instances": [
-          "div.multi-tile-cards.aem-GridColumn:nth-of-type(1)",
-          "div.multi-tile-cards.aem-GridColumn:nth-of-type(2)",
-          "div.multi-tile-cards.aem-GridColumn:nth-of-type(3)"
+          "div.multi-tile-cards.aem-GridColumn:nth-of-type(11)",
+          "div.multi-tile-cards.aem-GridColumn:nth-of-type(14)",
+          "div.multi-tile-cards.aem-GridColumn:nth-of-type(15)"
         ]
       },
       {
         "name": "cards-value",
         "instances": [
-          "div.generic-list-value-prop.aem-GridColumn:nth-of-type(1)",
-          "div.generic-list-value-prop.aem-GridColumn:nth-of-type(2)"
+          "div.generic-list-value-prop.aem-GridColumn:nth-of-type(8)",
+          "div.generic-list-value-prop.aem-GridColumn:nth-of-type(16)"
         ]
       },
       {
         "name": "hero-dark",
         "instances": [
-          "div.hero.aem-GridColumn:nth-of-type(2)",
-          "div.hero.aem-GridColumn:nth-of-type(3)",
-          "div.hero.aem-GridColumn:nth-of-type(4)"
+          "div.hero.aem-GridColumn:nth-of-type(9)",
+          "div.hero.aem-GridColumn:nth-of-type(12)",
+          "div.hero.aem-GridColumn:nth-of-type(13)"
         ]
       },
       {
@@ -397,7 +380,7 @@ var CustomImportScript = (() => {
       {
         "id": "section-3",
         "name": "Hero Banner",
-        "selector": "div.hero.aem-GridColumn:nth-of-type(1)",
+        "selector": "div.hero.aem-GridColumn:nth-of-type(5)",
         "style": null,
         "blocks": [
           "hero-banner"
@@ -417,19 +400,19 @@ var CustomImportScript = (() => {
       {
         "id": "section-5",
         "name": "Plan Features",
-        "selector": "div.generic-list-value-prop.aem-GridColumn:nth-of-type(1)",
+        "selector": "div.generic-list-value-prop.aem-GridColumn:nth-of-type(8)",
         "style": null,
         "blocks": [
           "cards-value"
         ],
         "defaultContent": [
-          "div.generic-list-value-prop:nth-of-type(1) h3"
+          "div.generic-list-value-prop:nth-of-type(8) h3"
         ]
       },
       {
         "id": "section-6",
         "name": "Award Banner",
-        "selector": "div.hero.aem-GridColumn:nth-of-type(2)",
+        "selector": "div.hero.aem-GridColumn:nth-of-type(9)",
         "style": null,
         "blocks": [
           "hero-dark"
@@ -449,19 +432,19 @@ var CustomImportScript = (() => {
       {
         "id": "section-8",
         "name": "Deal Cards",
-        "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(1)",
+        "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(11)",
         "style": "accent",
         "blocks": [
           "cards-product"
         ],
         "defaultContent": [
-          "div.multi-tile-cards:nth-of-type(1) .eyebrow-heading-body"
+          "div.multi-tile-cards:nth-of-type(11) .eyebrow-heading-body"
         ]
       },
       {
         "id": "section-9",
         "name": "Bundle Hero",
-        "selector": "div.hero.aem-GridColumn:nth-of-type(3)",
+        "selector": "div.hero.aem-GridColumn:nth-of-type(12)",
         "style": null,
         "blocks": [
           "hero-dark"
@@ -471,7 +454,7 @@ var CustomImportScript = (() => {
       {
         "id": "section-10",
         "name": "Guarantee Hero",
-        "selector": "div.hero.aem-GridColumn:nth-of-type(4)",
+        "selector": "div.hero.aem-GridColumn:nth-of-type(13)",
         "style": null,
         "blocks": [
           "hero-dark"
@@ -481,37 +464,37 @@ var CustomImportScript = (() => {
       {
         "id": "section-11",
         "name": "Add-on Cards",
-        "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(2)",
+        "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(14)",
         "style": "accent",
         "blocks": [
           "cards-product"
         ],
         "defaultContent": [
-          "div.multi-tile-cards:nth-of-type(2) .eyebrow-heading-body"
+          "div.multi-tile-cards:nth-of-type(14) .eyebrow-heading-body"
         ]
       },
       {
         "id": "section-12",
         "name": "Device Cards",
-        "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(3)",
+        "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(15)",
         "style": null,
         "blocks": [
           "cards-product"
         ],
         "defaultContent": [
-          "div.multi-tile-cards:nth-of-type(3) .eyebrow-heading-body"
+          "div.multi-tile-cards:nth-of-type(15) .eyebrow-heading-body"
         ]
       },
       {
         "id": "section-13",
         "name": "Help Section",
-        "selector": "div.generic-list-value-prop.aem-GridColumn:nth-of-type(2)",
+        "selector": "div.generic-list-value-prop.aem-GridColumn:nth-of-type(16)",
         "style": "accent",
         "blocks": [
           "cards-value"
         ],
         "defaultContent": [
-          "div.generic-list-value-prop:nth-of-type(2) h3"
+          "div.generic-list-value-prop:nth-of-type(16) h3"
         ]
       },
       {
@@ -550,9 +533,10 @@ var CustomImportScript = (() => {
     ...PAGE_TEMPLATE.sections && PAGE_TEMPLATE.sections.length > 1 ? [transform2] : []
   ];
   function executeTransformers(hookName, element, payload) {
-    const enhancedPayload = __spreadProps(__spreadValues({}, payload), {
+    const enhancedPayload = {
+      ...payload,
       template: PAGE_TEMPLATE
-    });
+    };
     transformers.forEach((transformerFn) => {
       try {
         transformerFn.call(null, hookName, element, enhancedPayload);

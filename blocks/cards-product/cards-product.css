@@ -1,12 +1,17 @@
 /* Cards Product - Product listing tiles with images */
 
-.cards-product > div {
+/* Structure: .cards-product > ul > li > div(image) + div(text) */
+
+.cards-product > ul {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-s);
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.cards-product > div > div {
+.cards-product > ul > li {
   display: flex;
   flex-direction: column;
   border-radius: 16px;
@@ -16,37 +21,37 @@
   transition: box-shadow var(--transition-base), transform var(--transition-base);
 }
 
-.cards-product > div > div:hover {
+.cards-product > ul > li:hover {
   box-shadow: 0 4px 16px rgb(0 0 0 / 10%);
   transform: translateY(-2px);
 }
 
-.cards-product > div > div > div:first-child {
+.cards-product > ul > li > div:first-child {
   line-height: 0;
 }
 
-.cards-product > div > div > div:first-child img {
+.cards-product > ul > li > div:first-child img {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
 }
 
-.cards-product > div > div > div:last-child {
+.cards-product > ul > li > div:last-child {
   padding: var(--spacing-s) var(--spacing-m);
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.cards-product > div > div > div:last-child p {
+.cards-product > ul > li > div:last-child p {
   margin: 0 0 var(--spacing-xs);
   font-size: var(--body-font-size-s);
   color: var(--text-color-secondary);
   line-height: 1.5;
 }
 
-.cards-product > div > div > div:last-child p strong {
+.cards-product > ul > li > div:last-child p strong {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   color: var(--text-color);
@@ -54,13 +59,13 @@
   margin-bottom: var(--spacing-xs);
 }
 
-.cards-product > div > div > div:last-child .button-container {
+.cards-product > ul > li > div:last-child .button-container {
   margin-top: auto;
   padding-top: var(--spacing-s);
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.cards-product > div > div > div:last-child .button-container a {
+.cards-product > ul > li > div:last-child .button-container a {
   background-color: transparent;
   color: var(--att-blue);
   border: none;
@@ -73,19 +78,19 @@
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-.cards-product > div > div > div:last-child .button-container a:hover {
+.cards-product > ul > li > div:last-child .button-container a:hover {
   text-decoration: underline;
   background-color: transparent;
 }
 
 @media (width >= 600px) {
-  .cards-product > div {
+  .cards-product > ul {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (width >= 900px) {
-  .cards-product > div {
+  .cards-product > ul {
     grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-m);
   }

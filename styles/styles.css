@@ -1023,3 +1023,49 @@ footer .footer > div > div:last-child p {
 .section.hero-banner-container {
   background-color: #f5f7fa;
 }
+
+/* ========== SUB-NAVIGATION BAR ========== */
+
+main > .section:first-child > .default-content-wrapper > ul:first-child {
+  display: flex;
+  gap: var(--spacing-m);
+  list-style: none;
+  padding: var(--spacing-xs) var(--spacing-s);
+  margin: 0;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--border-color);
+  -webkit-overflow-scrolling: touch;
+}
+
+main > .section:first-child > .default-content-wrapper > ul:first-child::-webkit-scrollbar {
+  display: none;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+main > .section:first-child > .default-content-wrapper > ul:first-child li {
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+main > .section:first-child > .default-content-wrapper > ul:first-child a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  font-size: var(--body-font-size-s);
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+main > .section:first-child > .default-content-wrapper > ul:first-child a:hover {
+  color: var(--att-blue);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+main > .section:first-child > .default-content-wrapper > ul:first-child img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
