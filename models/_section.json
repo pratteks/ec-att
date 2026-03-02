@@ -74,7 +74,10 @@
         "columns",
         "columns-offer",
         "carousel-industry",
+        "accordion-faq",
         "accordion-links",
+        "business-goal",
+        "plan-comparison",
         "fragment"
       ]
     }

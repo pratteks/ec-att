@@ -1,8 +1,25 @@
 var CustomImportScript = (() => {
   var __defProp = Object.defineProperty;
+  var __defProps = Object.defineProperties;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
   var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __getOwnPropSymbols = Object.getOwnPropertySymbols;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __propIsEnum = Object.prototype.propertyIsEnumerable;
+  var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+  var __spreadValues = (a, b) => {
+    for (var prop in b || (b = {}))
+      if (__hasOwnProp.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    if (__getOwnPropSymbols)
+      for (var prop of __getOwnPropSymbols(b)) {
+        if (__propIsEnum.call(b, prop))
+          __defNormalProp(a, prop, b[prop]);
+      }
+    return a;
+  };
+  var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
   var __export = (target, all) => {
     for (var name in all)
       __defProp(target, name, { get: all[name], enumerable: true });
@@ -236,6 +253,86 @@ var CustomImportScript = (() => {
     element.replaceWith(block);
   }
 
+  // tools/importer/parsers/plan-comparison.js
+  function parse7(element, { document }) {
+    const slides = Array.from(element.querySelectorAll(".swiper-slide"));
+    const cells = [];
+    slides.forEach((slide) => {
+      const container = slide.querySelector(".plan-card-container");
+      if (!container) return;
+      const headerCell = document.createDocumentFragment();
+      headerCell.appendChild(document.createComment(" field:header "));
+      const badgeEl = container.querySelector(".js-best-plan-section p");
+      if (badgeEl) {
+        const badgeP = document.createElement("p");
+        const em = document.createElement("em");
+        em.textContent = badgeEl.textContent.trim();
+        badgeP.appendChild(em);
+        headerCell.appendChild(badgeP);
+      }
+      const nameEl = container.querySelector(".js-heading-section");
+      if (nameEl) {
+        const nameP = document.createElement("p");
+        const strong = document.createElement("strong");
+        strong.textContent = nameEl.textContent.trim();
+        nameP.appendChild(strong);
+        headerCell.appendChild(nameP);
+      }
+      const activePrice = container.querySelector(".price-multifieldItem.active, .price-multifieldItem:first-child");
+      if (activePrice) {
+        const strikethrough = activePrice.querySelector(".strikethrough, .js-price-strikethrough-section");
+        if (strikethrough) {
+          const sP = document.createElement("p");
+          const s = document.createElement("s");
+          s.textContent = strikethrough.textContent.trim();
+          sP.appendChild(s);
+          headerCell.appendChild(sP);
+        }
+        const priceText = activePrice.textContent.trim().replace(/\s+/g, " ");
+        const priceMatch = priceText.match(/\$\s*(\d+)\s*\/mo\.\s*per line/);
+        if (priceMatch) {
+          const priceP = document.createElement("p");
+          priceP.textContent = "$" + priceMatch[1] + "/mo. per line";
+          headerCell.appendChild(priceP);
+        }
+        const noteMatch = priceText.match(/(When you get \d+ lines?)/i);
+        if (noteMatch) {
+          const noteP = document.createElement("p");
+          noteP.textContent = noteMatch[1];
+          headerCell.appendChild(noteP);
+        }
+      }
+      const bodyCell = document.createDocumentFragment();
+      bodyCell.appendChild(document.createComment(" field:body "));
+      const featureEls = container.querySelectorAll(".card-item-features .flex-items-top");
+      featureEls.forEach((feat) => {
+        const p = feat.querySelector("p");
+        if (p) {
+          const featureP = document.createElement("p");
+          const text = p.textContent.trim().replace(/\s+/g, " ");
+          if (text) {
+            featureP.textContent = text;
+            bodyCell.appendChild(featureP);
+          }
+        }
+      });
+      const savingsContainer = container.querySelector(".wrapper-signature .signature-section-container");
+      if (savingsContainer) {
+        const savingsText = savingsContainer.textContent.trim().replace(/\s+/g, " ");
+        if (savingsText) {
+          const savingsP = document.createElement("p");
+          const em = document.createElement("em");
+          em.textContent = savingsText;
+          savingsP.appendChild(em);
+          bodyCell.appendChild(savingsP);
+        }
+      }
+      cells.push([headerCell, bodyCell]);
+    });
+    const block = WebImporter.Blocks.createBlock(document, { name: "plan-comparison", cells });
+    element.replaceWith(block);
+  }
+
   // tools/importer/transformers/att-cleanup.js
   var TransformHook = { beforeTransform: "beforeTransform", afterTransform: "afterTransform" };
   function transform(hookName, element, payload) {
@@ -354,6 +451,12 @@ var CustomImportScript = (() => {
         "instances": [
           "div.accordion-panel.aem-GridColumn"
         ]
+      },
+      {
+        "name": "plan-comparison",
+        "instances": [
+          "div.tab-cmp.aem-GridColumn"
+        ]
       }
     ],
     "sections": [
@@ -392,9 +495,12 @@ var CustomImportScript = (() => {
         "name": "Plan Comparison",
         "selector": "div.tab-cmp.aem-GridColumn",
         "style": "grey",
-        "blocks": [],
+        "blocks": [
+          "plan-comparison"
+        ],
         "defaultContent": [
-          "div.tab-cmp"
+          "div.tab-cmp h2",
+          "div.tab-cmp h2 + p"
         ]
       },
       {
@@ -526,17 +632,17 @@ var CustomImportScript = (() => {
     "cards-value": parse3,
     "hero-dark": parse4,
     "columns-offer": parse5,
-    "accordion-faq": parse6
+    "accordion-faq": parse6,
+    "plan-comparison": parse7
   };
   var transformers = [
     transform,
     ...PAGE_TEMPLATE.sections && PAGE_TEMPLATE.sections.length > 1 ? [transform2] : []
   ];
   function executeTransformers(hookName, element, payload) {
-    const enhancedPayload = {
-      ...payload,
+    const enhancedPayload = __spreadProps(__spreadValues({}, payload), {
       template: PAGE_TEMPLATE
-    };
+    });
     transformers.forEach((transformerFn) => {
       try {
         transformerFn.call(null, hookName, element, enhancedPayload);

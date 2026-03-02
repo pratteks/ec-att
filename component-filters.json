@@ -26,6 +26,7 @@
       "accordion-faq",
       "accordion-links",
       "business-goal",
+      "plan-comparison",
       "fragment"
     ]
   },
@@ -111,6 +112,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "plan-comparison",
+    "components": [
+      "plan-comparison-item"
     ]
   }
 ]

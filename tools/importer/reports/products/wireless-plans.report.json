@@ -2,7 +2,7 @@
   "status": "success",
   "url": "https://www.business.att.com/products/wireless-plans.html",
   "path": "products/wireless-plans",
-  "timestamp": "2026-03-02T13:40:12.511Z",
+  "timestamp": "2026-03-02T14:53:49.922Z",
   "title": "Business Cell Phone Plans | AT&T Business Wireless & Mobile",
   "template": "product-page",
   "blocks": [
@@ -16,6 +16,7 @@
     "hero-dark",
     "hero-dark",
     "columns-offer",
-    "accordion-faq"
+    "accordion-faq",
+    "plan-comparison"
   ]
 }

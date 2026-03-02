@@ -460,5 +460,26 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "plan-comparison-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "header",
+        "value": "",
+        "label": "Plan Header",
+        "description": "Badge, plan name, and pricing info",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "value": "",
+        "label": "Plan Features",
+        "description": "Features list and savings info",
+        "valueType": "string"
+      }
+    ]
   }
 ]

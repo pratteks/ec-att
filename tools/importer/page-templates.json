@@ -404,6 +404,12 @@
           "instances": [
             "div.accordion-panel.aem-GridColumn"
           ]
+        },
+        {
+          "name": "plan-comparison",
+          "instances": [
+            "div.tab-cmp.aem-GridColumn"
+          ]
         }
       ],
       "sections": [
@@ -442,9 +448,12 @@
           "name": "Plan Comparison",
           "selector": "div.tab-cmp.aem-GridColumn",
           "style": "grey",
-          "blocks": [],
+          "blocks": [
+            "plan-comparison"
+          ],
           "defaultContent": [
-            "div.tab-cmp"
+            "div.tab-cmp h2",
+            "div.tab-cmp h2 + p"
           ]
         },
         {

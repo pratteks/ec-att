@@ -8,6 +8,7 @@ import cardsValueParser from './parsers/cards-value.js';
 import heroDarkParser from './parsers/hero-dark.js';
 import columnsOfferParser from './parsers/columns-offer.js';
 import accordionFaqParser from './parsers/accordion-faq.js';
+import planComparisonParser from './parsers/plan-comparison.js';
 
 // TRANSFORMER IMPORTS
 import attCleanupTransformer from './transformers/att-cleanup.js';
@@ -64,6 +65,12 @@ const PAGE_TEMPLATE = {
       "instances": [
         "div.accordion-panel.aem-GridColumn"
       ]
+    },
+    {
+      "name": "plan-comparison",
+      "instances": [
+        "div.tab-cmp.aem-GridColumn"
+      ]
     }
   ],
   "sections": [
@@ -102,9 +109,12 @@ const PAGE_TEMPLATE = {
       "name": "Plan Comparison",
       "selector": "div.tab-cmp.aem-GridColumn",
       "style": "grey",
-      "blocks": [],
+      "blocks": [
+        "plan-comparison"
+      ],
       "defaultContent": [
-        "div.tab-cmp"
+        "div.tab-cmp h2",
+        "div.tab-cmp h2 + p"
       ]
     },
     {
@@ -239,6 +249,7 @@ const parsers = {
   'hero-dark': heroDarkParser,
   'columns-offer': columnsOfferParser,
   'accordion-faq': accordionFaqParser,
+  'plan-comparison': planComparisonParser,
 };
 
 // TRANSFORMER REGISTRY

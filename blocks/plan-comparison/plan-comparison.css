@@ -1,0 +1,126 @@
+/* Plan Comparison - Pricing plan cards with features */
+
+/* Structure: .plan-comparison > ul > li > div(header) + div(body) */
+
+.plan-comparison > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-m);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.plan-comparison > ul > li {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+}
+
+/* Header: badge + plan name + price */
+.plan-comparison > ul > li > div:first-child {
+  padding: var(--spacing-m);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.plan-comparison > ul > li > div:first-child p {
+  margin: 0 0 var(--spacing-xs);
+  line-height: 1.4;
+}
+
+/* Badge (em tag) */
+.plan-comparison > ul > li > div:first-child p em {
+  display: inline-block;
+  background-color: #baeef7;
+  color: var(--text-color-secondary);
+  font-size: var(--body-font-size-xs);
+  font-style: normal;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* Plan name (strong tag) */
+.plan-comparison > ul > li > div:first-child p strong {
+  font-size: var(--heading-font-size-l);
+  font-weight: 400;
+  color: var(--text-color);
+  display: block;
+  line-height: 1.2;
+}
+
+/* Strikethrough price (del tag) */
+.plan-comparison > ul > li > div:first-child p del {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-light);
+}
+
+/* Price text (paragraph after strikethrough) */
+.plan-comparison > ul > li > div:first-child p:has(del) + p {
+  font-size: var(--heading-font-size-xxl);
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+/* Price note */
+.plan-comparison > ul > li > div:first-child p:last-child {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-secondary);
+}
+
+/* stylelint-disable no-descending-specificity -- body section targets div:last-child, not div:first-child */
+
+/* Body: features + savings */
+.plan-comparison > ul > li > div:last-child {
+  padding: var(--spacing-m);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-comparison > ul > li > div:last-child p {
+  margin: 0;
+  padding: var(--spacing-xs) 0;
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-secondary);
+  line-height: 1.5;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.plan-comparison > ul > li > div:last-child p:last-child {
+  border-bottom: none;
+}
+
+/* Savings banner (em tag in body) */
+.plan-comparison > ul > li > div:last-child p em {
+  display: block;
+  font-style: normal;
+  background-color: #f2fafd;
+  border-radius: 12px;
+  padding: var(--spacing-s);
+  margin-top: var(--spacing-s);
+  font-size: var(--body-font-size-xs);
+  color: var(--text-color-secondary);
+  line-height: 1.5;
+  border-bottom: none;
+}
+
+.plan-comparison > ul > li > div:last-child p:has(em) {
+  border-bottom: none;
+  padding: 0;
+}
+
+@media (width >= 600px) {
+  .plan-comparison > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 900px) {
+  .plan-comparison > ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
