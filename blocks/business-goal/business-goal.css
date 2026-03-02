@@ -1,0 +1,94 @@
+/* Business Goal - Table of business goals with descriptions and solution links */
+
+/* Container */
+.business-goal {
+  margin-bottom: var(--spacing-m);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Row */
+.business-goal > div {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--spacing-m) var(--spacing-l);
+}
+
+.business-goal > div:last-child {
+  border-bottom: none;
+}
+
+/* Goal title (first cell) */
+.business-goal > div > div:first-child p {
+  font-weight: 700;
+  font-size: var(--body-font-size-m);
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-xs);
+}
+
+/* Description (second cell) */
+.business-goal > div > div:nth-child(2) p {
+  font-size: var(--body-font-size-s);
+  color: var(--text-color-secondary);
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-xs);
+}
+
+/* Handle links in first/second cells that become buttons */
+.business-goal > div > div:first-child a.button,
+.business-goal > div > div:nth-child(2) a.button {
+  all: unset;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Solution links (third cell) - override button styles to text links */
+.business-goal > div > div:nth-child(3) p {
+  margin: 0 0 4px;
+}
+
+.business-goal > div > div:nth-child(3) .button-container {
+  display: inline;
+  margin: 0;
+}
+
+.business-goal > div > div:nth-child(3) a,
+.business-goal > div > div:nth-child(3) a.button {
+  all: unset;
+  color: var(--att-cyan);
+  text-decoration: none;
+  font-size: var(--body-font-size-s);
+  font-weight: 400;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  display: inline;
+}
+
+.business-goal > div > div:nth-child(3) a:hover,
+.business-goal > div > div:nth-child(3) a.button:hover {
+  text-decoration: underline;
+  color: var(--att-cyan);
+  background: none;
+}
+
+/* Desktop: 3-column table layout */
+@media (width >= 900px) {
+  .business-goal > div {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: var(--spacing-m);
+    align-items: start;
+  }
+
+  .business-goal > div > div:first-child p {
+    margin-bottom: 0;
+  }
+
+  .business-goal > div > div:nth-child(2) p {
+    margin-bottom: 0;
+  }
+}

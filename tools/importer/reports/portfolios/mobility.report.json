@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/portfolios/mobility.html",
+  "path": "portfolios/mobility",
+  "timestamp": "2026-03-02T10:00:11.024Z",
+  "title": "AT&T Wireless Solutions, Mobile Business Services & Support",
+  "template": "portfolio-page",
+  "blocks": [
+    "hero-banner",
+    "cards-promo",
+    "cards-product",
+    "cards-value",
+    "columns-offer",
+    "accordion-links"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/industries/manufacturing.html",
+  "path": "industries/manufacturing",
+  "timestamp": "2026-03-02T10:02:00.717Z",
+  "title": "IOT Network and Technology Solutions for Manufactures at AT&T Business",
+  "template": "industry-page",
+  "blocks": [
+    "hero-banner",
+    "cards-value",
+    "columns-offer",
+    "columns-offer",
+    "columns-offer"
+  ]
+}

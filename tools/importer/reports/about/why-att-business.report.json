@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/about/why-att-business.html",
+  "path": "about/why-att-business",
+  "timestamp": "2026-03-02T10:02:29.654Z",
+  "title": "Why Customers Choose AT&T Business For Expert Guidance and Advice",
+  "template": "landing-page",
+  "blocks": [
+    "hero-banner",
+    "cards-value",
+    "columns-offer",
+    "accordion-links"
+  ]
+}

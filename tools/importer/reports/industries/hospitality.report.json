@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/industries/hospitality.html",
+  "path": "industries/hospitality",
+  "timestamp": "2026-03-02T10:01:43.957Z",
+  "title": "Hospitality Technology & Guest Service Solutions at AT&T Business.",
+  "template": "industry-page",
+  "blocks": [
+    "hero-banner",
+    "hero-banner",
+    "columns-offer"
+  ]
+}

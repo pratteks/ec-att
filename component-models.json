@@ -158,6 +158,25 @@
     ]
   },
   {
+    "id": "accordion-faq-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Question",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "value": "",
+        "label": "Answer",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "accordion-links-item",
     "fields": [
       {
@@ -172,6 +191,32 @@
         "name": "body",
         "value": "",
         "label": "Body",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "business-goal-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Business Goal",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "body",
+        "value": "",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "links",
+        "value": "",
+        "label": "Solutions",
         "valueType": "string"
       }
     ]

@@ -208,6 +208,859 @@
           "defaultContent": []
         }
       ]
+    },
+    {
+      "name": "portfolio-page",
+      "urls": [
+        "https://www.business.att.com/portfolios/mobility.html",
+        "https://www.business.att.com/portfolios/business-internet.html",
+        "https://www.business.att.com/portfolios/collaboration.html",
+        "https://www.business.att.com/portfolios/cybersecurity.html",
+        "https://www.business.att.com/portfolios/networking.html",
+        "https://www.business.att.com/portfolios/internet-of-things.html"
+      ],
+      "description": "Product portfolio landing page with hero, feature grid, solution modules, AT&T Guarantee section, sales contact form, and related links",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "div.hero.aem-GridColumn:first-of-type"
+          ]
+        },
+        {
+          "name": "cards-promo",
+          "instances": [
+            "div.flex-cards .row-of-cards"
+          ]
+        },
+        {
+          "name": "cards-product",
+          "instances": [
+            "div.multi-tile-cards .multi-tile-section"
+          ]
+        },
+        {
+          "name": "cards-value",
+          "instances": [
+            "div.generic-list-value-prop .generic-list-icon-vp-row"
+          ]
+        },
+        {
+          "name": "hero-dark",
+          "instances": [
+            "div.hero.aem-GridColumn:nth-of-type(2)"
+          ]
+        },
+        {
+          "name": "columns-offer",
+          "instances": [
+            "div.offer.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "accordion-links",
+          "instances": [
+            "div.link-farm.aem-GridColumn"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Banner",
+          "selector": "div.hero.aem-GridColumn:first-of-type",
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Product Cards",
+          "selector": "div.flex-cards.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "cards-promo"
+          ],
+          "defaultContent": [
+            "div.flex-cards .grid-col-10 h2"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Device Tiles",
+          "selector": "div.multi-tile-cards.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "div.multi-tile-cards .eyebrow-heading-body"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Mobility Solutions",
+          "selector": "div.generic-list-value-prop.aem-GridColumn",
+          "style": "accent",
+          "blocks": [
+            "cards-value"
+          ],
+          "defaultContent": [
+            "div.generic-list-value-prop .grid-col-10"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "AT&T Guarantee Hero",
+          "selector": "div.hero.aem-GridColumn:nth-of-type(2)",
+          "style": null,
+          "blocks": [
+            "hero-dark"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-6",
+          "name": "Enterprise Mobility Leader",
+          "selector": "div.offer.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "columns-offer"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Contact Sales Form",
+          "selector": "div.rai-form.aem-GridColumn",
+          "style": "grey",
+          "blocks": [],
+          "defaultContent": [
+            "div.rai-form .RAIHeader",
+            "div.rai-form section.body-section"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Link Farm",
+          "selector": "div.link-farm.aem-GridColumn",
+          "style": "grey",
+          "blocks": [
+            "accordion-links"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "product-page",
+      "urls": [
+        "https://www.business.att.com/products/wireless-plans.html",
+        "https://www.business.att.com/products/business-fiber-internet.html",
+        "https://www.business.att.com/products/att-dynamic-defense.html",
+        "https://www.business.att.com/products/sd-wan.html"
+      ],
+      "description": "Individual product page with hero, pricing/plan comparison, feature highlights, awards, bundle offers, FAQ accordion, and sales contact form",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "div.hero.aem-GridColumn:nth-of-type(1)"
+          ]
+        },
+        {
+          "name": "cards-product",
+          "instances": [
+            "div.multi-tile-cards.aem-GridColumn:nth-of-type(1)",
+            "div.multi-tile-cards.aem-GridColumn:nth-of-type(2)",
+            "div.multi-tile-cards.aem-GridColumn:nth-of-type(3)"
+          ]
+        },
+        {
+          "name": "cards-value",
+          "instances": [
+            "div.generic-list-value-prop.aem-GridColumn:nth-of-type(1)",
+            "div.generic-list-value-prop.aem-GridColumn:nth-of-type(2)"
+          ]
+        },
+        {
+          "name": "hero-dark",
+          "instances": [
+            "div.hero.aem-GridColumn:nth-of-type(2)",
+            "div.hero.aem-GridColumn:nth-of-type(3)",
+            "div.hero.aem-GridColumn:nth-of-type(4)"
+          ]
+        },
+        {
+          "name": "columns-offer",
+          "instances": [
+            "div.offer.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "accordion-faq",
+          "instances": [
+            "div.accordion-panel.aem-GridColumn"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Sub Navigation",
+          "selector": "div.headband-baem.aem-GridColumn",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.headband-baem"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "Trial Banner",
+          "selector": "div.micro-banner.aem-GridColumn",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "div.micro-banner"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Hero Banner",
+          "selector": "div.hero.aem-GridColumn:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Plan Comparison",
+          "selector": "div.tab-cmp.aem-GridColumn",
+          "style": "grey",
+          "blocks": [],
+          "defaultContent": [
+            "div.tab-cmp"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Plan Features",
+          "selector": "div.generic-list-value-prop.aem-GridColumn:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "cards-value"
+          ],
+          "defaultContent": [
+            "div.generic-list-value-prop:nth-of-type(1) h3"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Award Banner",
+          "selector": "div.hero.aem-GridColumn:nth-of-type(2)",
+          "style": null,
+          "blocks": [
+            "hero-dark"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Security Offer",
+          "selector": "div.offer.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "columns-offer"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Deal Cards",
+          "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(1)",
+          "style": "accent",
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "div.multi-tile-cards:nth-of-type(1) .eyebrow-heading-body"
+          ]
+        },
+        {
+          "id": "section-9",
+          "name": "Bundle Hero",
+          "selector": "div.hero.aem-GridColumn:nth-of-type(3)",
+          "style": null,
+          "blocks": [
+            "hero-dark"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-10",
+          "name": "Guarantee Hero",
+          "selector": "div.hero.aem-GridColumn:nth-of-type(4)",
+          "style": null,
+          "blocks": [
+            "hero-dark"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-11",
+          "name": "Add-on Cards",
+          "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(2)",
+          "style": "accent",
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "div.multi-tile-cards:nth-of-type(2) .eyebrow-heading-body"
+          ]
+        },
+        {
+          "id": "section-12",
+          "name": "Device Cards",
+          "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(3)",
+          "style": null,
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "div.multi-tile-cards:nth-of-type(3) .eyebrow-heading-body"
+          ]
+        },
+        {
+          "id": "section-13",
+          "name": "Help Section",
+          "selector": "div.generic-list-value-prop.aem-GridColumn:nth-of-type(2)",
+          "style": "accent",
+          "blocks": [
+            "cards-value"
+          ],
+          "defaultContent": [
+            "div.generic-list-value-prop:nth-of-type(2) h3"
+          ]
+        },
+        {
+          "id": "section-14",
+          "name": "FAQ Accordion",
+          "selector": "div.accordion-panel.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "accordion-faq"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-15",
+          "name": "Contact Sales Form",
+          "selector": "div.rai-form.aem-GridColumn",
+          "style": "grey",
+          "blocks": [],
+          "defaultContent": [
+            "div.rai-form .RAIHeader",
+            "div.rai-form section.body-section"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "industry-page",
+      "urls": [
+        "https://www.business.att.com/industries/healthcare.html",
+        "https://www.business.att.com/industries/retail.html",
+        "https://www.business.att.com/industries/hospitality.html",
+        "https://www.business.att.com/industries/finance.html",
+        "https://www.business.att.com/industries/transportation.html",
+        "https://www.business.att.com/industries/manufacturing.html",
+        "https://www.business.att.com/industries/public-sector.html",
+        "https://www.business.att.com/small-business.html"
+      ],
+      "description": "Industry or sector landing page with hero, tabbed navigation, solution cards, case studies, insights section, and sales CTA",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "div.marquee-heading.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "cards-value",
+          "instances": [
+            "div.icon-grid.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "columns-offer",
+          "instances": [
+            "div.image-text-business.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "cards-promo",
+          "instances": [
+            "div.content-teaser.aem-GridColumn:nth-of-type(1)",
+            "div.content-teaser.aem-GridColumn:nth-of-type(2)"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Breadcrumb",
+          "selector": "div.breadcrumb.aem-GridColumn",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.breadcrumb"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "Award Banner",
+          "selector": "div.text.parbase.aem-GridColumn:first-of-type",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.text.parbase:first-of-type"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Hero Marquee",
+          "selector": "div.marquee-heading.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Solutions Heading",
+          "selector": "div.segment-heading.aem-GridColumn:nth-of-type(1)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.segment-heading:nth-of-type(1)"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Solutions Description",
+          "selector": "div.text.parbase.aem-GridColumn:nth-of-type(2)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.text.parbase:nth-of-type(2)"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Solutions Icon Grid",
+          "selector": "div.icon-grid.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "cards-value"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "In Action Heading",
+          "selector": "div.segment-heading.aem-GridColumn:nth-of-type(2)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.segment-heading:nth-of-type(2)"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Featured Story",
+          "selector": "div.image-text-business.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "columns-offer"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-9",
+          "name": "Case Study Cards",
+          "selector": "div.content-teaser.aem-GridColumn:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "cards-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-10",
+          "name": "Insights Heading",
+          "selector": "div.segment-heading.aem-GridColumn:nth-of-type(4)",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.segment-heading:nth-of-type(4)"
+          ]
+        },
+        {
+          "id": "section-11",
+          "name": "Insights Cards",
+          "selector": "div.content-teaser.aem-GridColumn:nth-of-type(2)",
+          "style": null,
+          "blocks": [
+            "cards-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-12",
+          "name": "Why AT&T Banner",
+          "selector": "div.image-heading.aem-GridColumn",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.image-heading"
+          ]
+        },
+        {
+          "id": "section-13",
+          "name": "Contact Info",
+          "selector": "div.contact.aem-GridColumn",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.contact"
+          ]
+        },
+        {
+          "id": "section-14",
+          "name": "Contact Form",
+          "selector": "div.rai-form.aem-GridColumn",
+          "style": "grey",
+          "blocks": [],
+          "defaultContent": [
+            "div.rai-form"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "landing-page",
+      "urls": [
+        "https://www.business.att.com/about/why-att-business.html",
+        "https://www.business.att.com/offers/switch-to-att-business.html"
+      ],
+      "description": "Promotional or about landing page with hero, value propositions, feature highlights, and sales CTA",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "div.hero.aem-GridColumn:nth-of-type(1)",
+            "div.hero.aem-GridColumn:nth-of-type(2)"
+          ]
+        },
+        {
+          "name": "cards-value",
+          "instances": [
+            "div.generic-list-value-prop.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "cards-product",
+          "instances": [
+            "div.multi-tile-cards.aem-GridColumn:nth-of-type(1)",
+            "div.multi-tile-cards.aem-GridColumn:nth-of-type(2)",
+            "div.multi-tile-cards.aem-GridColumn:nth-of-type(3)"
+          ]
+        },
+        {
+          "name": "columns-offer",
+          "instances": [
+            "div.offer.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "accordion-links",
+          "instances": [
+            "div.link-farm.aem-GridColumn"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Banner",
+          "selector": "div.hero.aem-GridColumn:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Value Propositions",
+          "selector": "div.generic-list-value-prop.aem-GridColumn",
+          "style": "accent",
+          "blocks": [
+            "cards-value"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "AT&T Difference Cards",
+          "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "div.multi-tile-cards:nth-of-type(1) .eyebrow-heading-body"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "Guarantee Hero",
+          "selector": "div.hero.aem-GridColumn:nth-of-type(2)",
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-5",
+          "name": "Customer Stories Cards",
+          "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(2)",
+          "style": null,
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "div.multi-tile-cards:nth-of-type(2) .eyebrow-heading-body"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Award Banner",
+          "selector": "div.offer.aem-GridColumn",
+          "style": "grey",
+          "blocks": [
+            "columns-offer"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "CTA Cards",
+          "selector": "div.multi-tile-cards.aem-GridColumn:nth-of-type(3)",
+          "style": null,
+          "blocks": [
+            "cards-product"
+          ],
+          "defaultContent": [
+            "div.multi-tile-cards:nth-of-type(3) .eyebrow-heading-body"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Resource Links",
+          "selector": "div.link-farm.aem-GridColumn",
+          "style": "grey",
+          "blocks": [
+            "accordion-links"
+          ],
+          "defaultContent": []
+        }
+      ]
+    },
+    {
+      "name": "hub-page",
+      "urls": [
+        "https://www.business.att.com/learn.html",
+        "https://www.business.att.com/learn/customer-stories.html",
+        "https://www.business.att.com/support.html"
+      ],
+      "description": "Content hub or listing page with category navigation, article/story cards, and search or filter functionality",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "div.marquee-heading.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "cards-story",
+          "instances": [
+            "div.featured-issue.aem-GridColumn",
+            "div.latest-filter-article.aem-GridColumn"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero Banner",
+          "selector": "div.marquee-heading.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Featured Article",
+          "selector": "div.featured-issue.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "cards-story"
+          ],
+          "defaultContent": [
+            "div.featured-issue .welcome-bar"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Article Listing",
+          "selector": "div.latest-filter-article.aem-GridColumn",
+          "style": null,
+          "blocks": [
+            "cards-story"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Email Signup",
+          "selector": "div.email-signup.aem-GridColumn",
+          "style": "accent",
+          "blocks": [],
+          "defaultContent": [
+            "div.email-signup"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "customer-story",
+      "urls": [
+        "https://www.business.att.com/learn/customer-stories/parkville.html"
+      ],
+      "description": "Individual customer story with breadcrumbs, hero image, tabbed content (highlights, solutions, about), challenge/result/solution columns, and related product cards",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": [
+            "div.marquee-heading.aem-GridColumn:nth-of-type(1)"
+          ]
+        },
+        {
+          "name": "cards-value",
+          "instances": [
+            "div.icon-list.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "cards-promo",
+          "instances": [
+            "div.content-teaser.aem-GridColumn"
+          ]
+        },
+        {
+          "name": "columns-offer",
+          "instances": [
+            "div.image-text-business.aem-GridColumn"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Breadcrumb",
+          "selector": "div.breadcrumb.aem-GridColumn",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.breadcrumb"
+          ]
+        },
+        {
+          "id": "section-2",
+          "name": "Hero Marquee",
+          "selector": "div.marquee-heading.aem-GridColumn:nth-of-type(1)",
+          "style": null,
+          "blocks": [
+            "hero-banner"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Highlights",
+          "selector": [
+            "div.segment-heading.aem-GridColumn:nth-of-type(1)",
+            "div.icon-list.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-value"
+          ],
+          "defaultContent": [
+            "div.segment-heading:nth-of-type(1)"
+          ]
+        },
+        {
+          "id": "section-4",
+          "name": "AT&T Solutions",
+          "selector": [
+            "div.segment-heading.aem-GridColumn:nth-of-type(2)",
+            "div.content-teaser.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-promo"
+          ],
+          "defaultContent": [
+            "div.segment-heading:nth-of-type(2)"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "About",
+          "selector": [
+            "div.segment-heading.aem-GridColumn:nth-of-type(3)",
+            "div.image-text-business.aem-GridColumn"
+          ],
+          "style": null,
+          "blocks": [
+            "columns-offer"
+          ],
+          "defaultContent": [
+            "div.segment-heading:nth-of-type(3)"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Contact",
+          "selector": "div.contact.aem-GridColumn",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "div.contact"
+          ]
+        }
+      ]
     }
   ]
 }

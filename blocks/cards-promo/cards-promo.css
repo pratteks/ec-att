@@ -46,6 +46,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  padding-top: var(--spacing-s);
 }
 
 .cards-promo > ul > li > div:last-child p {
@@ -58,13 +59,15 @@
 .cards-promo > ul > li > div:last-child p:first-child {
   font-size: var(--body-font-size-xs);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: var(--text-color-light);
-  font-weight: 500;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
 }
 
 .cards-promo > ul > li > div:last-child p strong {
-  font-size: var(--heading-font-size-m);
+  font-size: var(--heading-font-size-s);
+  font-weight: 700;
   color: var(--text-color);
   display: block;
   margin-bottom: var(--spacing-xs);
@@ -74,6 +77,11 @@
 .cards-promo > ul > li > div:last-child .button-container {
   margin-top: auto;
   padding-top: var(--spacing-s);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-promo > ul > li > div:last-child .button-container a {
+  font-size: var(--body-font-size-s);
 }
 
 @media (width >= 600px) {

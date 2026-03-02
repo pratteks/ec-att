@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/learn/customer-stories/parkville.html",
+  "path": "learn/customer-stories/parkville",
+  "timestamp": "2026-03-02T10:03:23.971Z",
+  "title": "Parkville Creekside Development Relies on AT&T Business Fiber",
+  "template": "customer-story",
+  "blocks": [
+    "cards-value",
+    "cards-promo",
+    "columns-offer"
+  ]
+}

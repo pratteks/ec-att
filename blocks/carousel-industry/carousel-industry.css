@@ -1,4 +1,4 @@
-/* Carousel Industry - Industry sector list with icon and text rows */
+/* Carousel Industry - Industry sector cards as carousel */
 
 .carousel-industry .carousel-industry-slides-container {
   position: relative;
@@ -13,7 +13,10 @@
 
 .carousel-industry .carousel-industry-slides {
   display: flex;
-  flex-direction: column;
+  gap: var(--spacing-s);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 .carousel-industry .carousel-industry-slides::-webkit-scrollbar {
@@ -21,29 +24,26 @@
 }
 
 .carousel-industry .carousel-industry-slide {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: var(--spacing-m) 0;
-  border-bottom: 1px solid var(--border-color);
-  gap: var(--spacing-s);
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--grey-color);
   cursor: pointer;
-  transition: background-color var(--transition-base);
-}
-
-.carousel-industry .carousel-industry-slide:first-child {
-  border-top: 1px solid var(--border-color);
+  transition: box-shadow var(--transition-base);
 }
 
 .carousel-industry .carousel-industry-slide:hover {
-  background-color: var(--grey-color);
+  box-shadow: 0 4px 16px rgb(0 0 0 / 8%);
 }
 
 .carousel-industry .carousel-industry-slide .carousel-industry-slide-image {
-  flex: 0 0 64px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: var(--spacing-m) var(--spacing-m) 0;
 }
 
 .carousel-industry .carousel-industry-slide .carousel-industry-slide-image picture {
@@ -60,7 +60,7 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding: var(--spacing-s) var(--spacing-m) var(--spacing-m);
   color: var(--text-color);
   background-color: transparent;
   position: static;
@@ -84,15 +84,47 @@
 }
 
 .carousel-industry .carousel-industry-slide-indicators {
-  display: none;
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding-top: var(--spacing-m);
+}
+
+.carousel-industry .carousel-industry-slide-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--border-color);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color var(--transition-base);
+  min-width: unset;
+  min-height: unset;
+}
+
+.carousel-industry .carousel-industry-slide-indicators button[aria-selected="true"],
+.carousel-industry .carousel-industry-slide-indicators button:hover {
+  background-color: var(--att-blue);
 }
 
 .carousel-industry .carousel-industry-navigation-buttons {
   display: none;
 }
 
+@media (width >= 600px) {
+  .carousel-industry .carousel-industry-slide {
+    flex: 0 0 calc(50% - 8px);
+  }
+}
+
 @media (width >= 900px) {
-  .carousel-industry .carousel-industry-slide .carousel-industry-slide-image {
-    flex: 0 0 80px;
+  .carousel-industry .carousel-industry-slides {
+    overflow-x: visible;
+    flex-wrap: wrap;
+  }
+
+  .carousel-industry .carousel-industry-slide {
+    flex: 0 0 calc(25% - 12px);
   }
 }

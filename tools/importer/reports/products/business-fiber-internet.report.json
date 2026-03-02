@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/products/business-fiber-internet.html",
+  "path": "products/business-fiber-internet",
+  "timestamp": "2026-03-02T10:01:06.605Z",
+  "title": "AT&T Business Fiber®: High Speed Business Fiber Internet Service",
+  "template": "product-page",
+  "blocks": [
+    "hero-dark",
+    "columns-offer",
+    "accordion-faq",
+    "accordion-faq"
+  ]
+}

@@ -31,8 +31,11 @@
 }
 
 .columns-offer > div > div p:first-child {
-  font-size: var(--body-font-size-s);
+  font-size: var(--body-font-size-xs);
   color: var(--text-color-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
 }
 
 .columns-offer > div > div h2,
@@ -41,6 +44,7 @@
   font-size: var(--heading-font-size-xxl);
   font-weight: 700;
   line-height: 1.15;
+  letter-spacing: -0.03em;
 }
 
 .columns-offer > div > div ul {
@@ -85,7 +89,7 @@
 
   .columns-offer > div > div h2,
   .columns-offer > div > div h3 {
-    font-size: 48px;
+    font-size: 38px;
     line-height: 1.15;
   }
 }

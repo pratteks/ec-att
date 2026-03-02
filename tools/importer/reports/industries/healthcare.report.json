@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/industries/healthcare.html",
+  "path": "industries/healthcare",
+  "timestamp": "2026-03-02T10:01:33.523Z",
+  "title": "Cybersecurity, Networking & Iot Healthcare Solutions at AT&T.",
+  "template": "industry-page",
+  "blocks": [
+    "hero-banner",
+    "cards-value",
+    "columns-offer"
+  ]
+}

@@ -83,6 +83,36 @@
       "id": "blocks",
       "components": [
         {
+          "title": "Accordion Faq",
+          "id": "accordion-faq",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Accordion Faq",
+                  "filter": "accordion-faq"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Accordion Faq Item",
+          "id": "accordion-faq-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Accordion Faq Item",
+                  "model": "accordion-faq-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Accordion Links",
           "id": "accordion-links",
           "plugins": {
@@ -107,6 +137,36 @@
                 "template": {
                   "name": "Accordion Links Item",
                   "model": "accordion-links-item"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Business Goal",
+          "id": "business-goal",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Business Goal",
+                  "filter": "business-goal"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Business Goal Item",
+          "id": "business-goal-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Business Goal Item",
+                  "model": "business-goal-item"
                 }
               }
             }

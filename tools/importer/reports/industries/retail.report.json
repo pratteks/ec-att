@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/industries/retail.html",
+  "path": "industries/retail",
+  "timestamp": "2026-03-02T10:01:39.311Z",
+  "title": "Connected Consumer & Retail Technology Solutions at AT&T Business.",
+  "template": "industry-page",
+  "blocks": [
+    "hero-banner",
+    "cards-value",
+    "columns-offer"
+  ]
+}

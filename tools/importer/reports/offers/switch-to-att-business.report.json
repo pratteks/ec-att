@@ -1,0 +1,15 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/offers/switch-to-att-business.html",
+  "path": "offers/switch-to-att-business",
+  "timestamp": "2026-03-02T10:02:36.674Z",
+  "title": "Change your wireless carrier and internet. Switch to AT&T Business",
+  "template": "landing-page",
+  "blocks": [
+    "hero-banner",
+    "cards-value",
+    "cards-value",
+    "cards-product",
+    "columns-offer"
+  ]
+}

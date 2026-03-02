@@ -49,6 +49,7 @@
 .hero-dark h6 {
   color: var(--text-color-inverse);
   max-width: 600px;
+  letter-spacing: -0.03em;
 }
 
 .hero-dark p {
@@ -96,5 +97,9 @@
 
   .hero-dark > div:last-child {
     padding: var(--spacing-l);
+  }
+
+  .hero-dark h2 {
+    font-size: 38px;
   }
 }

@@ -36,10 +36,11 @@
 }
 
 .hero-banner > div:last-child > div > p:first-child {
-  font-size: 20px;
-  line-height: 1.05;
-  color: var(--text-color);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-color-secondary);
   margin: 0 0 var(--spacing-xs);
+  font-weight: 400;
 }
 
 .hero-banner h2 {
@@ -47,13 +48,14 @@
   font-weight: 700;
   color: var(--text-color);
   line-height: 1.15;
+  letter-spacing: -0.03em;
   margin: var(--spacing-xs) 0 var(--spacing-s);
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 .hero-banner > div:last-child p {
   color: var(--text-color-secondary);
-  font-size: var(--body-font-size-l);
+  font-size: 17px;
   line-height: 1.4;
   margin: 0 0 var(--spacing-s);
 }
@@ -65,7 +67,7 @@
 @media (width >= 900px) {
   .hero-banner {
     flex-direction: row;
-    min-height: 500px;
+    min-height: 480px;
     align-items: stretch;
   }
 
@@ -85,11 +87,11 @@
   }
 
   .hero-banner > div:first-child img {
-    min-height: 500px;
+    min-height: 480px;
   }
 
   .hero-banner h2 {
-    font-size: 48px;
+    font-size: 38px;
     line-height: 1.15;
   }
 }

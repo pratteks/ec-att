@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/industries/transportation.html",
+  "path": "industries/transportation",
+  "timestamp": "2026-03-02T10:01:53.480Z",
+  "title": "Fiber, 5G and other digital solutions for the transportation industry",
+  "template": "industry-page",
+  "blocks": [
+    "hero-banner",
+    "cards-value",
+    "columns-offer"
+  ]
+}

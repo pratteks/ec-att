@@ -109,6 +109,17 @@
   }
 }
 
+/* ========== SECTION HEADING CENTERING ========== */
+
+/* Center section intro headings that precede block content */
+.cards-story-container > .default-content-wrapper:first-child,
+.cards-promo-container > .default-content-wrapper:first-child,
+.cards-value-container > .default-content-wrapper:first-child,
+.carousel-industry-container > .default-content-wrapper:first-child,
+.accordion-links-container > .default-content-wrapper:first-child {
+  text-align: center;
+}
+
 /* ========== BASE STYLES ========== */
 
 body {
@@ -161,7 +172,7 @@ h6 {
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
+h2 { font-size: var(--heading-font-size-xxl); }
 h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
@@ -498,6 +509,7 @@ blockquote {
 
 /* The default-content-wrapper after accordion-links contains duplicate footer
    links already present in the footer block — hide entirely */
+/* stylelint-disable-next-line no-descending-specificity */
 .accordion-links-wrapper + .default-content-wrapper {
   display: none;
 }
@@ -574,7 +586,9 @@ blockquote {
 /* ========== CARDS-VALUE TRAILING CONTENT (J.D. POWER + DYNAMIC DEFENSE) ========== */
 
 /* J.D. Power trophy images - display side by side */
+/* stylelint-disable-next-line no-descending-specificity */
 .cards-value-container > .default-content-wrapper:last-child > p:nth-child(4),
+/* stylelint-disable-next-line no-descending-specificity */
 .cards-value-container > .default-content-wrapper:last-child > p:nth-child(5) {
   display: inline-block;
   vertical-align: top;
@@ -588,6 +602,7 @@ blockquote {
 }
 
 /* Dynamic Defense section - dark hero treatment */
+/* stylelint-disable-next-line no-descending-specificity */
 .cards-value-container > .default-content-wrapper:last-child > p:nth-child(6) {
   margin-top: var(--spacing-xxl);
   font-size: var(--body-font-size-s);
@@ -597,6 +612,7 @@ blockquote {
 }
 
 /* Dynamic Defense background image - position behind text */
+/* stylelint-disable-next-line no-descending-specificity */
 .cards-value-container > .default-content-wrapper:last-child > p:nth-child(11) {
   display: none;
 }
@@ -604,6 +620,7 @@ blockquote {
 /* ========== CAROUSEL SECTION - INTRO IMAGE ========== */
 
 /* Hide the large intro image to match original's compact industry intro */
+/* stylelint-disable-next-line no-descending-specificity */
 .carousel-industry-container > .default-content-wrapper:first-child > p:last-child {
   display: none;
 }
@@ -623,22 +640,61 @@ blockquote {
   border-radius: 16px;
 }
 
+/* AT&T Guarantee CTA buttons (Shop deals / Learn more) */
+.carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(5) a {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-m);
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: var(--spacing-s);
+  margin-top: var(--spacing-s);
+  font-size: var(--body-font-size-s);
+}
+
+.carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(5) a:first-child {
+  background-color: var(--att-blue);
+  color: var(--text-color-inverse);
+  border: 2px solid var(--att-blue);
+}
+
+.carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(5) a:first-child:hover {
+  background-color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(5) a:last-child {
+  background-color: transparent;
+  color: var(--att-blue);
+  border: 2px solid var(--att-blue);
+}
+
+.carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(5) a:last-child:hover {
+  background-color: var(--att-blue);
+  color: var(--text-color-inverse);
+}
+
 /* Hide the AT&T Guarantee background image (was a dark hero overlay in original) */
+/* stylelint-disable-next-line no-descending-specificity */
 .carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(6) {
   display: none;
 }
 
 /* AT&T Guarantee checklist */
+/* stylelint-disable-next-line no-descending-specificity */
 .carousel-industry-container > .default-content-wrapper:last-child > ul {
   list-style: none;
   padding-left: 0;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .carousel-industry-container > .default-content-wrapper:last-child > ul > li {
   position: relative;
   padding-left: var(--spacing-m);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .carousel-industry-container > .default-content-wrapper:last-child > ul > li::before {
   content: '\2713';
   position: absolute;
@@ -650,7 +706,25 @@ blockquote {
 
 /* ========== CUSTOMER STORIES ========== */
 
+/* Story category labels (Retail, Real estate, etc.) */
+/* stylelint-disable no-descending-specificity */
+.carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(10),
+.carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(16),
+.carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(22),
+.carousel-industry-container > .default-content-wrapper:last-child > p:nth-child(28) {
+  font-size: var(--body-font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-color-light);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xxs);
+  margin-top: var(--spacing-m);
+}
+
+/* stylelint-enable no-descending-specificity */
+
 /* Customer story section heading */
+/* stylelint-disable-next-line no-descending-specificity */
 .carousel-industry-container > .default-content-wrapper:last-child > h3 {
   font-size: var(--heading-font-size-s);
   color: var(--text-color);
@@ -658,6 +732,7 @@ blockquote {
 }
 
 /* Story card images - compact size */
+/* stylelint-disable-next-line no-descending-specificity */
 .carousel-industry-container > .default-content-wrapper:last-child > p:has(img:only-child) {
   line-height: 0;
   margin-bottom: var(--spacing-s);
@@ -735,16 +810,23 @@ blockquote {
   }
 }
 
-/* Read the full story links */
-.carousel-industry-container > .default-content-wrapper:last-child > p > a[href*="customer-stories"],
-.carousel-industry-container > .default-content-wrapper:last-child > p > a[href*="medical-spa"] {
+/* Read the full story links - override button styling to show as text links */
+.carousel-industry-container > .default-content-wrapper:last-child .button-container .button {
+  background-color: transparent;
   color: var(--att-blue);
+  border: none;
+  padding: 0;
+  height: auto;
   font-weight: 700;
   text-decoration: none;
+  font-size: var(--body-font-size-s);
+  margin: 0;
 }
 
-.carousel-industry-container > .default-content-wrapper:last-child > p > a[href*="customer-stories"]:hover,
-.carousel-industry-container > .default-content-wrapper:last-child > p > a[href*="medical-spa"]:hover {
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-industry-container > .default-content-wrapper:last-child .button-container .button:hover {
+  background-color: transparent;
+  color: var(--link-hover-color);
   text-decoration: underline;
 }
 
@@ -770,4 +852,174 @@ blockquote {
   .section.cards-promo-container > .cards-promo-wrapper:first-of-type {
     flex: 2;
   }
+}
+
+/* ========== CAROUSEL-INDUSTRY DUPLICATE ITEMS ========== */
+
+/* Hide duplicate carousel slides (odd items are title-only duplicates) */
+.carousel-industry .carousel-industry-slide:nth-child(even) {
+  display: none;
+}
+
+/* ========== DYNAMIC DEFENSE DARK HERO TREATMENT ========== */
+
+/* Wrap Dynamic Defense content in dark section styling */
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-value-container > .default-content-wrapper:last-child {
+  position: relative;
+}
+
+/* Dark background for Dynamic Defense area (children 5-9) */
+/* stylelint-disable no-descending-specificity */
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(6),
+.cards-value-container > .default-content-wrapper:last-child > h2:nth-of-type(2),
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(8),
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(9),
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(10) {
+  position: relative;
+  z-index: 1;
+}
+
+/* stylelint-enable no-descending-specificity */
+
+/* Create dark background container using pseudo-element */
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(6)::before {
+  content: '';
+  position: absolute;
+  inset: calc(-1 * var(--spacing-xl)) calc(-1 * var(--spacing-xxl));
+  z-index: -1;
+}
+
+/* Dynamic Defense heading - larger and bolder */
+.cards-value-container > .default-content-wrapper:last-child > h2:nth-of-type(2) {
+  font-size: var(--heading-font-size-l);
+  margin-top: var(--spacing-s);
+  margin-bottom: var(--spacing-s);
+}
+
+/* CTA buttons in Dynamic Defense section */
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(10) a {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-m);
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  margin-right: var(--spacing-s);
+  margin-top: var(--spacing-s);
+  font-size: var(--body-font-size-s);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(10) a:first-child {
+  background-color: var(--att-blue);
+  color: var(--text-color-inverse);
+  border: 2px solid var(--att-blue);
+}
+
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(10) a:first-child:hover {
+  background-color: var(--link-hover-color);
+  border-color: var(--link-hover-color);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(10) a:last-child {
+  background-color: transparent;
+  color: var(--att-blue);
+  border: 2px solid var(--att-blue);
+}
+
+.cards-value-container > .default-content-wrapper:last-child > p:nth-child(10) a:last-child:hover {
+  background-color: var(--att-blue);
+  color: var(--text-color-inverse);
+}
+
+/* ========== FOOTER STYLING ========== */
+
+/* Footer brand bar - blue background with AT&T Business logo and social icons */
+footer .footer > div > div:first-child {
+  background-color: var(--att-blue);
+  padding: var(--spacing-m) var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > div:first-child a {
+  color: var(--text-color-inverse);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > div:first-child p:last-child a {
+  font-weight: 400;
+  margin-left: var(--spacing-s);
+  font-size: var(--body-font-size-s);
+}
+
+/* Footer navigation links - horizontal layout */
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > div:nth-child(2) ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-s) var(--spacing-m);
+  list-style: none;
+  padding: var(--spacing-m) var(--spacing-xl);
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > div:nth-child(2) a {
+  color: var(--text-color-secondary);
+  text-decoration: none;
+  font-size: var(--body-font-size-s);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > div:nth-child(2) a:hover {
+  text-decoration: underline;
+}
+
+/* Footer legal links and copyright */
+footer .footer > div > div:last-child {
+  padding: var(--spacing-m) var(--spacing-xl);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > div:last-child ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs) var(--spacing-m);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--spacing-s);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > div:last-child ul a {
+  color: var(--text-color-secondary);
+  text-decoration: none;
+  font-size: var(--body-font-size-xs);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > div:last-child ul a:hover {
+  text-decoration: underline;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+footer .footer > div > div:last-child p {
+  font-size: var(--body-font-size-xs);
+  color: var(--text-color-light);
+  line-height: 1.4;
+}
+
+/* ========== HERO-BANNER BACKGROUND TINT ========== */
+
+/* Subtle light blue-grey background for hero section */
+.section.hero-banner-container {
+  background-color: #f5f7fa;
 }

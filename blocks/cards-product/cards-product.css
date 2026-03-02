@@ -33,7 +33,7 @@
 }
 
 .cards-product > div > div > div:last-child {
-  padding: var(--spacing-s);
+  padding: var(--spacing-s) var(--spacing-m);
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -48,9 +48,34 @@
 
 .cards-product > div > div > div:last-child p strong {
   font-size: var(--heading-font-size-s);
+  font-weight: 700;
   color: var(--text-color);
   display: block;
   margin-bottom: var(--spacing-xs);
+}
+
+.cards-product > div > div > div:last-child .button-container {
+  margin-top: auto;
+  padding-top: var(--spacing-s);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-product > div > div > div:last-child .button-container a {
+  background-color: transparent;
+  color: var(--att-blue);
+  border: none;
+  padding: 0;
+  height: auto;
+  font-weight: 700;
+  font-size: var(--body-font-size-s);
+  text-decoration: none;
+  margin: 0;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.cards-product > div > div > div:last-child .button-container a:hover {
+  text-decoration: underline;
+  background-color: transparent;
 }
 
 @media (width >= 600px) {

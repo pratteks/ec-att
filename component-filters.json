@@ -23,14 +23,28 @@
       "columns",
       "columns-offer",
       "carousel-industry",
+      "accordion-faq",
       "accordion-links",
+      "business-goal",
       "fragment"
+    ]
+  },
+  {
+    "id": "accordion-faq",
+    "components": [
+      "accordion-faq-item"
     ]
   },
   {
     "id": "accordion-links",
     "components": [
       "accordion-links-item"
+    ]
+  },
+  {
+    "id": "business-goal",
+    "components": [
+      "business-goal-item"
     ]
   },
   {

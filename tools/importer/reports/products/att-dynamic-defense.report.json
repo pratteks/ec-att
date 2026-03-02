@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/products/att-dynamic-defense.html",
+  "path": "products/att-dynamic-defense",
+  "timestamp": "2026-03-02T10:01:11.789Z",
+  "title": "Enterprise Network Security and Threat Protection",
+  "template": "product-page",
+  "blocks": [
+    "hero-banner",
+    "cards-product",
+    "columns-offer",
+    "accordion-faq"
+  ]
+}

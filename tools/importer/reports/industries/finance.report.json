@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/industries/finance.html",
+  "path": "industries/finance",
+  "timestamp": "2026-03-02T10:01:49.111Z",
+  "title": "Financial Technology & Security Solutions at AT&T Business.",
+  "template": "industry-page",
+  "blocks": [
+    "hero-banner",
+    "hero-banner"
+  ]
+}

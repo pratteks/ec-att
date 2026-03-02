@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.business.att.com/portfolios/business-internet.html",
+  "path": "portfolios/business-internet",
+  "timestamp": "2026-03-02T10:00:19.677Z",
+  "title": "Ultra-Fast Business Internet & Wi-Fi Services | AT&T Business",
+  "template": "portfolio-page",
+  "blocks": [
+    "cards-product",
+    "cards-value",
+    "hero-dark",
+    "accordion-links"
+  ]
+}
